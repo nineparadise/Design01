@@ -1,0 +1,2647 @@
+﻿<!DOCTYPE html>
+
+<!--Div bar 3-->
+<!--
+ Licensed to the Apache Software Foundation (ASF) under one
+ or more contributor license agreements.  See the NOTICE file
+ distributed with this work for additional information
+ regarding copyright ownership.  The ASF licenses this file
+ to you under the Apache License, Version 2.0 (the
+ "License"); you may not use this file except in compliance
+ with the License.  You may obtain a copy of the License at
+ 
+ http://www.apache.org/licenses/LICENSE-2.0
+ 
+ Unless required by applicable law or agreed to in writing,
+ software distributed under the License is distributed on an
+ "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+ KIND, either express or implied.  See the License for the
+ specific language governing permissions and limitations
+ under the License.
+ -->
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="format-detection" content="telephone=yes" />
+        <meta name="viewport" content="user-scalable=yes, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height-50, target-densitydpi=device-dpi,background-color=gray" />
+       	<link rel="stylesheet" href="css/index.css" />
+		<link rel="stylesheet" href="css/external.css" />
+        <script src="js/jquery-1.8.3.min.js"></script> <!--jquery-->
+		<script src="js/jquery.mobile-1.2.1.min.js"></script> <!--jquerymobile-->
+		<script>
+		#rec {
+			position :absolute;
+			width: 100%;
+			height: 400px;
+			background: #007fff;
+			opacity:0.4;
+			z-index:-1;
+}
+		</script>
+        <script type="text/javascript">
+            app.initialize();
+            
+            
+            </script>
+        
+        
+        
+        <title>Hello World</title>
+    </head>
+    <body onload="onBodyLoad()" background="bg_text.jpg">
+    <div class="app">
+            
+            
+            <!-- Start of first page -->
+	<div class="container">
+			<!--////////////////////////////////////////////////////////////////////////////////////LOGINPAGE-->
+                <!--opentag container-->
+           	<div data-role="page" id="Loginpage" >
+                	<div class="">
+						<!--div data-role="header">
+							<h1 >Please Login</h1>
+						<!--/div--><!-- /header -->
+					</div><!-- block60-->
+				<div class="">
+					<div  data-role="fieldcontain" align="center">
+                    
+						<div  id="login">
+                                    
+
+                         <!--a href=""  ><img src = "Fingerprinticon.gif" /></a-->
+
+						<div style="margin-top:90%">	<a data-role="button" data-corners="false"  data-theme="b" id="loginbtn" name="loginbtn" style="padding-top:40px; height:120px ;" ><font size="50">Login</font></a> </div>
+					
+						</div><!-- /div login -->
+					</div><!-- block40-->
+				</div><!--closetag blog 40-->
+            </div>
+			
+			<!--////////////////////////////////////////////////////////////////////////////////////END  OF LOGINPAGE-->
+            
+			<!--////////////////////////////////////////////////////////////////////////////////////WAITING PAGE-->
+			<!-- Start of first page -->
+            <div  data-role="page" id="waitingpage" style="">
+                <center>
+                    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+                    <h1>Uploading in process</h1>
+                    
+                </center>
+                   
+            
+            </div><!-- /page -->
+        
+            <!--////////////////////////////////////////////////////////////////////////////////////END WAITING-->
+            
+			
+		            
+			<!--//////////////////////////////////////////////////////////////////////////////////// SEARCH PAGE-->
+			<!-- Start of second page -->
+		
+            <div  data-role="page" id="bar">
+                
+              <!--div style="position:relative; margin-top:0px;"-->
+                  <div data-role="header" data-theme="a">		
+					<div data-role="navbar" >
+						<ul>
+							<li><a href="#bar2" data-role="button"  data-transition="none"   data-inline="true">Scan</a></li>
+							<li><a href="#bar"  data-role="button"  data-transition="none" data-inline="true"class="ui-btn-active ui-state-persist">Search</a></li>
+							<li><a href="#bar3" data-role="button" data-transition="none" data-inline="true">Report</a></li>
+						</ul>
+					</div><!-- /navbar -->
+
+				  </div><!-- /footer -->
+			 <!--/div-->
+                
+                <div data-role="content">
+                    <div class="">
+						
+                                <div class="ui-grid-c" style="position:absolute; margin-top:13%; width:100%; height:100% ;z-index:-1;">
+									<div class="ui-block-a">
+										<select data-native-menu="false"  data-inline="true" id="FTStatus" name="FTStatus"><option selected value = "null">Status</option></select>
+									</div>
+                                
+                                    <div class="ui-block-b">
+										<select  data-native-menu="false" data-inline="true"id="FTPlace" name="FTPlace"><option selected value = "null">Place</option></select>
+									</div>
+                                    <div class="ui-block-c" >
+										<select  data-native-menu="false" data-inline="true"id="FTType" name="FTType"><option selected value = "null">Type</option></select>
+									</div>
+                                    <div class="ui-block-d">
+										<select  data-native-menu="false" data-inline="true"id="FTDate" name="FTDate"><option selected value = "null">Old-Code</option></select>
+									</div>
+								</div>
+
+								
+								<!--test-->
+
+								
+								<!--test-->
+								
+                               <div class="ui-grid-a"style="position:absolute; width:100%; height:100% ; z-index:1">
+									<div class="ui-block-a"><button type="button" id="FTStatusb" data-corners="false" data-theme="d"><h1>Status</h1></button></div>
+									<div class="ui-block-b"> <button type="button" id="FTPlaceb" data-corners="false"data-theme="d"><h1>Place</h1></button></div>
+
+									<div class="ui-block-c"><button type="button" id="FTTypeb" data-corners="false"data-theme="d"><h1>Type</h1></button></div>
+									<div class="ui-block-d"><button type="button" id="FTDateb" data-corners="false"data-theme="d"><h1>Date</h1></button></div>
+								</div>
+					</div>
+					
+					
+					<div class="" style=" position:absolute;  margin-top:20%; width:100%; height:100%; z-index:9999">
+						<center>
+						<center>
+						<div id ="FTResult">
+						</div>
+						</center>
+                    </div>
+                </div><!-- /content -->
+                
+                
+            </div><!-- /page -->
+            
+            <!--////////////////////////////////////////////////////////////////////////////////////END SEARCH PAGE-->
+			
+			
+			<!--////////////////////////////////////////////////////////////////////////////////////ALBUM  PAGE-->
+                <div  data-role="page" id="albumbpage">
+                    
+                    
+                    <div data-role="header" data-theme="a">
+                        <div data-role="navbar" >
+                            <ul>
+                                <li><a href="#bar2" data-role="button"    data-transition="none"   data-inline="true">Scan</a></li>
+                                <li><a href="#bar"  data-role="button"   data-transition="none"   data-inline="true">Search</a></li>
+                                <li><a href="#bar3" data-role="button"    data-transition="none" data-inline="true"class="ui-btn-active ui-state-persist">Report</a></li>
+                            </ul>
+                        </div></navbar >
+                        
+                    </div></footer >
+
+                    <div data-role="content">
+                        <div id = "albumCotent">
+                            
+                            
+                        </div>
+                        
+                        
+                    </div>
+                    
+                </div><!-- /page -->
+				
+				<!--////////////////////////////////////////////////////////////////////////////////////END ALBUM  PAGE-->
+            <!-- Start of Third page -->
+            
+			<!--////////////////////////////////////////////////////////////////////////////////////SCAN  PAGE-->
+            <div  data-role="page" id="bar2">
+                    
+                   <!--div style="position:relative; margin-top:0px;"-->
+						<div data-role="header" data-theme="a">		
+							<div data-role="navbar" >
+								<ul>
+									<li><a href="#bar2" data-role="button"  data-transition="none" data-inline="true"class="ui-btn-active ui-state-persist">Scan</a></li>
+									<li><a href="#bar"  data-role="button" data-transition="none" data-inline="true">Search</a></li>
+									<li><a href="#bar3" data-role="button" data-transition="none" data-inline="true">Report</a></li>
+								</ul>
+							</div><!-- /navbar -->
+
+						</div><!-- /footer -->
+					<!--/div-->
+                   
+               <div data-role="content">
+                       
+                        	<select  data-native-menu="false" data-inline="false" id="db" name="db">
+							<option selected value = "1">MAIN-DATABASE</option>
+							<option  value = "2">IT-DATABASE</option>
+							<option  value = "3">IT3D-DATABASE</option>
+							
+							</select>
+                      
+                          
+                        <button id="scan-button"data-theme="b"><div style="font-size:4em; padding:5%;">Scan Barcode</div></button>
+                        <div class="ui-grid-a" style="" >
+							<div class="ui-block-a"><button id = "uploadchoose"data-theme="d"><div style="font-size:4em; padding:5%;">Choose</div></button></div>
+							<div class="ui-block-b"><button id = "upload"data-theme="d"><div style="font-size:4em; padding:5%;">upload</div></button></div>				
+						</div>
+						
+						<input type="file"  id="capp" style="width:100%; height:20%; background-color:white; font-size:1.7em; margin:5%" />
+						<center><div id="scan-result" ></div></center>
+						<!--div style="position:relative; margin-top:90%; width:100%; "-->
+						<div class="ui-grid-b" >
+								<div class="ui-block-a"><button id = 'statuscheck'  data-theme="b" data-corners="false"><h2>ปรกติ</h2></button></div>
+								<div class="ui-block-b"><button id = 'bad'data-theme="b" data-corners="false"><h2>ชำรุดรอซ่อม</h2></button></div>
+								<div class="ui-block-c"><button id = 'worst'data-theme="b" data-corners="false"><h2>ชำรุดรอจำหน่าย</h2></button></div>
+						</div><!-- /grid-b -->
+
+
+                        
+				</div><!-- /content -->
+
+
+			</div><!-- /page -->
+		<!--//////////////////////////////////////////////////////////////////////////////////// END SCAN  PAGE-->
+		
+		<!--//////////////////////////////////////////////////////////////////////////////////// REPORT  PAGE-->
+          <!-- Start of forth page -->
+        <div  data-role="page" id="bar3">
+            
+        <!--div style="position:relative; margin-top:0px;"-->
+        <div data-role="header" data-theme="a">		
+			<div data-role="navbar" >
+				<ul>
+					<li><a href="#bar2" data-role="button"    data-transition="none"   data-inline="true">Scan</a></li>
+					<li><a href="#bar"  data-role="button"   data-transition="none"   data-inline="true">Search</a></li>
+					<li><a href="#bar3" data-role="button"    data-transition="none" data-inline="true"class="ui-btn-active ui-state-persist">Report</a></li>
+				</ul>
+			</div><!-- /navbar -->
+
+		</div><!-- /footer -->
+	
+            
+       <div data-role="content">
+
+				<center>
+				<table  style="padding:10px; margin-top:30%; width:80%; font-size:1.8" data-role="table" id="table-custom-2" data-mode="columntoggle" class="ui-body-d ui-shadow table-stripe ui-responsive" data-column-btn-theme="b" data-column-btn-text="Columns to display..." data-column-popup-theme="a">
+                    <thead>
+                        <tr>
+                            <th data-priority="2">Order</th>
+                            <th>Recent Report</th>
+                            
+                        </tr>
+                    </thead>
+                    <tbody align="center">
+                        <tr>
+                            <th>1</th>
+                           <td><a onclick="window.open('https://docs.google.com/spreadsheet/pub?key=0Arbwqwx7QLn7dFdPRThGZFphbTVFNVh0QUV4Y2VobXc&single=true&gid=13&output=pdf', '_blank', 'location=no,toolbar=no')">IT Report</a> </td>
+                           
+                        </tr>
+                        <tr>
+                            <th>2</th>
+                          <td><a onclick="window.open('https://docs.google.com/spreadsheet/pub?key=0Arbwqwx7QLn7dFdPRThGZFphbTVFNVh0QUV4Y2VobXc&single=true&gid=16&output=pdf', '_blank', 'location=no,toolbar=no')">IT3D Report</a> </td>
+                            
+                        </tr>
+                        <tr>
+                            <th>3</th>
+                           <td><a onclick="window.open('https://docs.google.com/spreadsheet/pub?key=0Arbwqwx7QLn7dFdPRThGZFphbTVFNVh0QUV4Y2VobXc&single=true&gid=7&output=pdf', '_blank', 'location=no,toolbar=no')">Main Report</a> </td>
+                           
+                        </tr>
+                     </tbody>
+                </table>
+				</center>
+                <br><br><br><br><br>
+                <a onclick="window.open('https://drive.google.com/a/fitm.kmutnb.ac.th/folderview?id=0B7bwqwx7QLn7TUZIYkZ2RzRJNDA&usp=drivesdk#', '_blank', 'location=no,toolbar=no')">go to report</a>
+				<div id=rec><div id=recwhite></div></div>
+					<div style="position:relative; padding-left:30%; padding-top:7%;">
+						<a href=""><img src="img/report.gif"/><a>
+					</div>
+
+           
+        </div><!--content-->
+        </div><!--page-->
+		
+		<!--//////////////////////////////////////////////////////////////////////////////////// END REPORT  PAGE-->
+		</div>
+	
+	</div> 
+        
+        <script type="text/javascript" src="cordova-2.7.0.js"></script>
+        <script type="text/javascript" src="js/index.js"></script>
+        <script type="text/javascript" src="barcodescanner.js"></script>
+        <script type="text/javascript">
+
+            app.initialize();
+            var i = 0;
+            var lastJSONReponse = null;
+            var lastITReponse = null;
+            var lastITTDReponse = null;
+            var lastDateReponse = null;
+            var lastPlaceReponse = null;
+            var lastTypeReponse = null;
+            var lastStatusReponse = null;
+            var lastNameReponse = null;
+            var lastJSONpicasa = null;
+            var pictureSource;   // picture source
+            var destinationType;
+            var tempToken = null;
+            var Bcode="";
+            var desc="";
+            var byteArray;
+            var picasaLink;
+            var tempalubum = new Array();
+            var albumcode;
+            var row;
+            var contentid;
+            var uploadwait=0;
+			var text;
+            var updateWait = 0;
+            var branch=1;
+            var scondit="1";
+            function onBodyLoad()
+            {
+                
+                
+                
+                resultSpan = document.getElementById("scan-result");
+                
+                
+                
+                
+                
+                
+                document.addEventListener("deviceready", onDeviceReady, false);
+            }
+            
+            function onDeviceReady()
+            {
+                
+                pictureSource=navigator.camera.PictureSourceType;
+                destinationType=navigator.camera.DestinationType;
+                document.addEventListener("backbutton", onBackKeyDown, false);
+                
+                pictureSource=navigator.camera.PictureSourceType;
+                destinationType=navigator.camera.DestinationType;
+                
+            }
+            
+            
+           
+            function clickScan() {
+                
+                window.plugins.barcodeScanner.scan(scannerSuccess, scannerFailure);
+            }
+            
+            
+            //------------------------------------------------------------------------------
+            function scannerSuccess(result) {
+                
+                console.log("scannerSuccess: result: " + result)
+                navigator.notification.vibrate(500);
+                //$("#scan-result").html("success: " +  JSON.stringify(result.text+" : "+result.format));
+                updateDB();
+                //$("#scan-result").html(" ");
+                 if(branch==1)searchRes1(result);
+                 if(branch==2)searchRes2(result);
+                 if(branch==3)searchRes3(result);
+
+                             
+                
+                
+                if($("#scan-result").html()==" ")
+                $("#scan-result").append("Not Found");
+                
+                
+                
+                
+                
+                
+                
+            }
+            
+            function searchRes2(result)
+            {
+                var myArr=new Array();
+                var myArray=new Array();
+                var tempText;
+                
+                for(var i = 0; i <lastITReponse.feed.entry.length ; i=i+1)
+                {
+                    myArray = lastITReponse.feed.entry[i].content["$t"];
+                    myArr = myArray.split(",");
+                    arrelem = myArr[0].split(":");
+                    tempalubum = myArr[9].split(":");
+                    albumcode = tempalubum[1].replace(" ","");
+                    text = arrelem[1].replace(" ","");
+                    if(text==result.text)
+                    {
+                       
+                        $("#scan-result").html(" ");
+                        row=i+2;
+                       var tempArray1 = new Array();
+                          var tempArray2 = new Array();
+                          for(var k = 0 ; k<myArr.length-4 ; k++)
+                          {
+                          tempText = myArr[k].split(":");
+						  
+                          tempArray1[k]=tempText[0];
+						  tempArray2[k]=tempText[1];
+						  
+                          
+                          
+                          } $("#scan-result").append('<a href="#" onclick=" window.open(\''+lastJSONpicasa.feed.entry[s]["link"][1].href+'\', \'_blank\', \'location=no,toolbar=no\')"><img src="'+lastJSONpicasa.feed.entry[s]["media$group"]["media$thumbnail"][0].url+'" /></a>');
+                                document.getElementById('place').value=tempArray2[4];
+						
+                        
+                        for(var s = 0; s <lastJSONpicasa.feed.entry.length ; s++)
+                        {
+                            if(text==lastJSONpicasa.feed.entry[s].title["$t"])
+                            {
+                                $("#scan-result").append('<a href="#" onclick=" window.open(\''+lastJSONpicasa.feed.entry[s]["link"][1].href+'\', \'_blank\', \'location=no,toolbar=no\')"><img style=\'padding:10px; backgound-color:white; \' src="'+lastJSONpicasa.feed.entry[s]["media$group"]["media$thumbnail"][0].url+'" /></a>');
+                                     if(albumcode!="-")
+                                {
+                                    albumcode = albumcode+":";
+                                    for(var arr=2 ; arr<tempalubum.length;arr++)
+                                    {
+                                        albumcode = albumcode+tempalubum[arr];
+                                    }
+                                    $.getJSON(albumcode+"/?alt=json",function(result0){
+                                              
+                                              $("#albumCotent").html(" ");
+                                              
+                                              for(var i=0 ;i<result0.feed.entry.length;i++)
+                                              {
+                                              
+                                              $("#albumCotent").append("<p>Image "+s+"</p><img style='width : 80%;height: 80% ;' src='"+result0.feed.entry[i]["media$group"]["media$content"][0].url+"' />");
+                                              }
+                                              
+                                              });
+                                }
+                                
+                            }
+                        }
+                        Bcode =text;
+                        i=lastITReponse.feed.entry.length;
+                    }
+                    else
+                    {
+                    }
+                }
+            }
+            function searchRes3(result)
+            {
+                var myArr=new Array();
+                var myArray=new Array();
+                var tempText;
+                 
+                
+                
+                for(var i = 0; i <lastITTDReponse.feed.entry.length ; i=i+1)
+                {
+                    myArray = lastITTDReponse.feed.entry[i].content["$t"];
+                    myArr = myArray.split(",");
+                    arrelem = myArr[0].split(":");
+                    tempalubum = myArr[9].split(":");
+                    albumcode = tempalubum[1].replace(" ","");
+                    text = arrelem[1].replace(" ","");
+                    if(text==result.text)
+                    {
+                       
+                        $("#scan-result").html(" ");
+                        row=i+2;
+                         $("#scan-result").html(" ");
+                        row=i+2;
+                       var tempArray1 = new Array();
+                          var tempArray2 = new Array();
+                          for(var k = 0 ; k<myArr.length-4 ; k++)
+                          {
+                          tempText = myArr[k].split(":");
+						  
+                          tempArray1[k]=tempText[0];
+						  tempArray2[k]=tempText[1];
+						  
+                          
+                          
+                          }
+						  
+						  					$("#scan-result").append('<table style="font-size:1.7em; width:90%; height:50%;" data-role="table" id="table-custom-2" data-mode="columntoggle" class="ui-body-d ui-shadow table-stripe ui-responsive" data-column-btn-theme="b" data-column-btn-text="Columns to display..." data-column-popup-theme="a"><thead><tr class="ui-bar-d"><th>Title</th><th>Description</th></tr></thead><tbody><tr><td>'+tempArray1[0]+'</td><td> '+ tempArray2[0]+'</td></tr><tr><td>'+tempArray1[1]+'</td><td> '+ tempArray2[1]+'</td></tr><tr><td>'+tempArray1[2]+'</td><td> '+ tempArray2[2]+'</td></tr><tr><td>'+tempArray1[3]+'</td><td> '+ tempArray2[3]+'</td></tr><tr><td>'+tempArray1[4]+'</td><td> <input type ="text" id="place" value=""></input></td></tr><tr><td>'+tempArray1[5]+'</td><td> '+ tempArray2[5]+'</td></tr><tr><td>'+tempArray1[6]+'</td><td> '+ tempArray2[6]+'</td></tr></tbody></table>');
+                           document.getElementById('place').value=tempArray2[4];
+						  
+                        var	st = result.text.replace(/[^a-zA-Z0-9]/g,'');
+                        Bcode = st;
+                        for(var s = 0; s <lastJSONpicasa.feed.entry.length ; s++)
+                        {
+                            if(text==lastJSONpicasa.feed.entry[s].title["$t"])
+                            {    $("#scan-result").append('<a href="#" onclick=" window.open(\''+lastJSONpicasa.feed.entry[s]["link"][1].href+'\', \'_blank\', \'location=no,toolbar=no\')"><img style=\'padding:10px; backgound-color:white; \' src="'+lastJSONpicasa.feed.entry[s]["media$group"]["media$thumbnail"][0].url+'" /></a>');
+                                 if(albumcode!="-")
+                                {
+                                    albumcode = albumcode+":";
+                                    for(var arr=2 ; arr<tempalubum.length;arr++)
+                                    {
+                                        albumcode = albumcode+tempalubum[arr];
+                                    }
+                                    $.getJSON(albumcode+"/?alt=json",function(result0){
+                                              
+                                              $("#albumCotent").html(" ");
+                                              
+                                              for(var i=0 ;i<result0.feed.entry.length;i++)
+                                              {
+                                              
+                                              $("#albumCotent").append("<p>Image "+s+"</p><img style='width : 80%;height: 80% ;' src='"+result0.feed.entry[i]["media$group"]["media$content"][0].url+"' />");
+                                              }
+                                              
+                                              });
+                                }
+                                
+                            }
+                        }
+                        Bcode =text;
+                        i=lastITTDReponse.feed.entry.length;
+                    }
+                    else
+                    {
+                        
+                    }
+                }
+            }
+            function searchRes1(result)
+            {
+            
+                var myArr=new Array();
+                var myArray=new Array();
+                var tempText;
+              
+                for(var i = 0; i <lastJSONReponse.feed.entry.length ; i=i+1)
+                {
+                    myArray = lastJSONReponse.feed.entry[i].content["$t"];
+                    myArr = myArray.split(",");
+                    arrelem = myArr[0].split(":");
+                    tempalubum = myArr[9].split(":");
+                    albumcode = tempalubum[1].replace(" ","");
+                    text = arrelem[1].replace(" ","");
+                    if(text==result.text)
+                    {
+                        
+                        $("#scan-result").html(" ");
+                        row=i+2;
+                          $("#scan-result").html(" ");
+                        row=i+2;
+                       var tempArray1 = new Array();
+                          var tempArray2 = new Array();
+                          for(var k = 0 ; k<myArr.length-4 ; k++)
+                          {
+                          tempText = myArr[k].split(":");
+						  
+                          tempArray1[k]=tempText[0];
+						  tempArray2[k]=tempText[1];
+						  
+                          
+                          
+                          }	$("#scan-result").append('<table style="font-size:1.7em; width:90%; height:50%;" data-role="table" id="table-custom-2" data-mode="columntoggle" class="ui-body-d ui-shadow table-stripe ui-responsive" data-column-btn-theme="b" data-column-btn-text="Columns to display..." data-column-popup-theme="a"><thead><tr class="ui-bar-d"><th>Title</th><th>Description</th></tr></thead><tbody><tr><td>'+tempArray1[0]+'</td><td> '+ tempArray2[0]+'</td></tr><tr><td>'+tempArray1[1]+'</td><td> '+ tempArray2[1]+'</td></tr><tr><td>'+tempArray1[2]+'</td><td> '+ tempArray2[2]+'</td></tr><tr><td>'+tempArray1[3]+'</td><td> '+ tempArray2[3]+'</td></tr><tr><td>'+tempArray1[4]+'</td><td> <input type ="text" id="place" value=""></input></td></tr><tr><td>'+tempArray1[5]+'</td><td> '+ tempArray2[5]+'</td></tr><tr><td>'+tempArray1[6]+'</td><td> '+ tempArray2[6]+'</td></tr></tbody></table>');
+                           document.getElementById('place').value=tempArray2[4];
+						   
+                        var	st = result.text.replace(/[^a-zA-Z0-9]/g,'');
+                        Bcode = st;
+                        for(var s = 0; s <lastJSONpicasa.feed.entry.length ; s++)
+                        {
+                            if(text==lastJSONpicasa.feed.entry[s].title["$t"])
+                            {
+                                 $("#scan-result").append('<a href="#" onclick=" window.open(\''+lastJSONpicasa.feed.entry[s]["link"][1].href+'\', \'_blank\', \'location=no,toolbar=no\')"><img style=\'padding:10px; backgound-color:white; \' src="'+lastJSONpicasa.feed.entry[s]["media$group"]["media$thumbnail"][0].url+'" /></a>');
+                                 if(albumcode!="-")
+                                {
+                                    albumcode = albumcode+":";
+                                    for(var arr=2 ; arr<tempalubum.length;arr++)
+                                    {
+                                        albumcode = albumcode+tempalubum[arr];
+                                    }
+                                    $.getJSON(albumcode+"&alt=json",function(result0){
+                                              
+                                              $("#albumCotent").html(" ");
+                                              
+                                              for(var i=0 ;i<result0.feed.entry.length;i++)
+                                              {
+                                              
+                                              $("#albumCotent").append("<br><br><p>Image "+s+"</p><p>Image "+s+"</p><img style='width : 80%;height: 80% ;' src='"+result0.feed.entry[i]["media$group"]["media$content"][0].url+"' />");
+                                              }
+                                              
+                                              });
+                                }
+                                
+                            }
+                        }
+                        Bcode =text;
+                        i=lastJSONReponse.feed.entry.length;
+                    }
+                    else
+                    {
+                        
+                    }
+                }
+            }
+            
+            //------------------------------------------------------------------------------
+            function scannerFailure(message) {
+                console.log("scannerFailure: message: " + message)
+                resultSpan.innerText = "failure: " + JSON.stringify(message)
+            }
+            
+            
+            function onBackKeyDown(evt)
+            {
+                evt.stopPropagation();
+                evt.preventDefault();
+                
+                
+                if(window.location.href=="file:///android_asset/www/index.html#bar"||window.location.href=="file:///android_asset/www/index.html#bar2"||window.location.href=="file:///android_asset/www/index.html#bar3"||window.location.href=="file:///android_asset/www/index.html#waitingpage")
+                {
+                    navigator.notification.confirm
+                    (
+                     'Do you want to signout?', // message
+                     onConfirm,            // callback to invoke with index of button pressed
+                     'google signout',           // title
+                     'Confirm,Cancle'         // buttonLabels
+                     );
+                    function onConfirm(buttonIndex)
+                    {
+                        $("#login p").append(buttonIndex);
+                        if(buttonIndex=="1")
+                        {
+                            window.open("https://www.google.com/accounts/Logout?", '_blank', 'location=no,toolbar=no');
+                            window.location="#Loginpage";
+                        }
+                    }
+                    
+                }
+                else
+                {
+                  //  history.back(1);
+                }
+                
+            }
+            
+            
+            
+            
+            
+            $("#scan-button").unbind("tap");
+            
+            
+            
+            
+            $("#scan-button").on('tap',clickScan);
+            
+            
+            
+            var $loginButton = $('#login a');
+            var $loginStatus = $('#login p');
+            var $loginButton2 = $('.ui-btn-right');
+            var $loginStatus2 = $('#login2 p');
+            
+            
+            
+            
+            
+            
+            function alertDismissed() {
+                
+            }
+            
+            
+            
+            
+            
+            $loginButton2.on('tap', function(evt) {
+                             evt.stopPropagation();
+                             evt.preventDefault();
+                             
+                             window.open("https://www.google.com/accounts/Logout?", '_', 'location=no,toolbar=no');
+                             
+                             
+                             });
+            
+            
+            
+            var url="";
+            
+            
+            $("#worst").unbind("tap");
+            $("#worst").on('tap',function(evt){
+                         evt.stopPropagation();
+                         evt.preventDefault();
+                         
+                         
+                         if(Bcode=="")
+                         {
+                         //alert("Form นี้ ได้จัดส่งรายงานแล้ว หากต้องการทำซ้ำหรือแก้ไขกรุณา Scan ใหม่อีกครั้ง");
+                         }
+                         else
+                           {
+                           if(branch==1)
+                           {
+                           var goodElement = '<entry xmlns="http://www.w3.org/2005/Atom" xmlns:gs="http://schemas.google.com/spreadsheets/2006"><id>https://spreadsheets.google.com/feeds/cells/0Arbwqwx7QLn7dFdPRThGZFphbTVFNVh0QUV4Y2VobXc/1/private/full/R'+row+'C10</id><link rel="edit" type="application/atom+xml" href="https://spreadsheets.google.com/feeds/cells/0Arbwqwx7QLn7dFdPRThGZFphbTVFNVh0QUV4Y2VobXc/1/private/full/R'+row+'C10"/><gs:cell row="'+row+'" col="10" inputValue="3"/></entry>';
+                           
+                           var statuschange = new XMLHttpRequest();
+                           statuschange.open('PUT','https://spreadsheets.google.com/feeds/cells/0Arbwqwx7QLn7dFdPRThGZFphbTVFNVh0QUV4Y2VobXc/1/private/full/R'+row+'C10');
+                           statuschange.setRequestHeader('Authorization','Bearer ' + localStorage.Token);
+                           statuschange.setRequestHeader('content-type','application/atom+xml');
+                           statuschange.setRequestHeader('Gdata-version','3.0');
+                           statuschange.setRequestHeader('if-match','*');
+                           statuschange.onreadystatechange=function() {
+                           if (statuschange.readyState==4) {
+                           ////alert("Status"+statuschange.status);
+                           updateDB();
+                           }
+                           else
+                           {
+                           }
+                           }
+                           statuschange.send(goodElement);
+                           
+                           
+                           
+                           var badElement = '<entry xmlns="http://www.w3.org/2005/Atom" xmlns:gs="http://schemas.google.com/spreadsheets/2006"><id>https://spreadsheets.google.com/feeds/cells/0Arbwqwx7QLn7dFdPRThGZFphbTVFNVh0QUV4Y2VobXc/1/private/full/R'+row+'C12</id><link rel="edit" type="application/atom+xml" href="https://spreadsheets.google.com/feeds/cells/0Arbwqwx7QLn7dFdPRThGZFphbTVFNVh0QUV4Y2VobXc/1/private/full/R'+row+'C12"/><gs:cell row="'+row+'" col="12" inputValue="'+jQuery.now()+'"/></entry>';
+                           
+                           var statuschange = new XMLHttpRequest();
+                           statuschange.open('PUT','https://spreadsheets.google.com/feeds/cells/0Arbwqwx7QLn7dFdPRThGZFphbTVFNVh0QUV4Y2VobXc/1/private/full/R'+row+'C12');
+                           statuschange.setRequestHeader('Authorization','Bearer ' + localStorage.Token);
+                           statuschange.setRequestHeader('content-type','application/atom+xml');
+                           statuschange.setRequestHeader('Gdata-version','3.0');
+                           statuschange.setRequestHeader('if-match','*');
+                           statuschange.onreadystatechange=function() {
+                           if (statuschange.readyState==4) {
+                           
+                           
+                           }
+                           else
+                           {
+                           }
+                           }
+                           statuschange.send(badElement);
+                           
+                           
+                           
+                           var placeelm = '<entry xmlns="http://www.w3.org/2005/Atom" xmlns:gs="http://schemas.google.com/spreadsheets/2006"><id>https://spreadsheets.google.com/feeds/cells/0Arbwqwx7QLn7dFdPRThGZFphbTVFNVh0QUV4Y2VobXc/1/private/full/R'+row+'C6</id><link rel="edit" type="application/atom+xml" href="https://spreadsheets.google.com/feeds/cells/0Arbwqwx7QLn7dFdPRThGZFphbTVFNVh0QUV4Y2VobXc/1/private/full/R'+row+'C6"/><gs:cell row="'+row+'" col="6" inputValue="'+document.getElementById('place').value+'"/></entry>';
+                           
+                           var statuschange = new XMLHttpRequest();
+                           statuschange.open('PUT','https://spreadsheets.google.com/feeds/cells/0Arbwqwx7QLn7dFdPRThGZFphbTVFNVh0QUV4Y2VobXc/1/private/full/R'+row+'C6');
+                           statuschange.setRequestHeader('Authorization','Bearer ' + localStorage.Token);
+                           statuschange.setRequestHeader('content-type','application/atom+xml');
+                           statuschange.setRequestHeader('Gdata-version','3.0');
+                           statuschange.setRequestHeader('if-match','*');
+                           statuschange.onreadystatechange=function() {
+                           if (statuschange.readyState==4) {
+                           
+                           
+                           }
+                           else
+                           {
+                           }
+                           }
+                           statuschange.send(placeelm);
+                           
+                           
+                           var reportelm = '<entry xmlns="http://www.w3.org/2005/Atom" xmlns:gs="http://schemas.google.com/spreadsheets/2006"><id>https://spreadsheets.google.com/feeds/cells/0Arbwqwx7QLn7dFdPRThGZFphbTVFNVh0QUV4Y2VobXc/6/private/full/R'+(row+5)+'C9</id><link rel="edit" type="application/atom+xml" href="https://spreadsheets.google.com/feeds/cells/0Arbwqwx7QLn7dFdPRThGZFphbTVFNVh0QUV4Y2VobXc/6/private/full/R'+(row+5)+'C9"/><gs:cell row="'+(row+5)+'" col="9" inputValue="/"/></entry>';
+                           
+                           var statuschange = new XMLHttpRequest();
+                           statuschange.open('PUT','https://spreadsheets.google.com/feeds/cells/0Arbwqwx7QLn7dFdPRThGZFphbTVFNVh0QUV4Y2VobXc/6/private/full/R'+(row+5)+'C9');
+                           statuschange.setRequestHeader('Authorization','Bearer ' + localStorage.Token);
+                           statuschange.setRequestHeader('content-type','application/atom+xml');
+                           statuschange.setRequestHeader('Gdata-version','3.0');
+                           statuschange.setRequestHeader('if-match','*');
+                           statuschange.onreadystatechange=function() {
+                           if (statuschange.readyState==4) {
+                           
+                           
+                           }
+                           else
+                           {
+                           }
+                           }
+                           statuschange.send(reportelm);
+                           
+                           var reportplace = '<entry xmlns="http://www.w3.org/2005/Atom" xmlns:gs="http://schemas.google.com/spreadsheets/2006"><id>https://spreadsheets.google.com/feeds/cells/0Arbwqwx7QLn7dFdPRThGZFphbTVFNVh0QUV4Y2VobXc/6/private/full/R'+(row+5)+'C6</id><link rel="edit" type="application/atom+xml" href="https://spreadsheets.google.com/feeds/cells/0Arbwqwx7QLn7dFdPRThGZFphbTVFNVh0QUV4Y2VobXc/6/private/full/R'+(row+5)+'C6"/><gs:cell row="'+(row+5)+'" col="6" inputValue="'+document.getElementById('place').value+'"/></entry>';
+                           
+                           var statuschange = new XMLHttpRequest();
+                           statuschange.open('PUT','https://spreadsheets.google.com/feeds/cells/0Arbwqwx7QLn7dFdPRThGZFphbTVFNVh0QUV4Y2VobXc/6/private/full/R'+(row+5)+'C6');
+                           statuschange.setRequestHeader('Authorization','Bearer ' + localStorage.Token);
+                           statuschange.setRequestHeader('content-type','application/atom+xml');
+                           statuschange.setRequestHeader('Gdata-version','3.0');
+                           statuschange.setRequestHeader('if-match','*');
+                           statuschange.onreadystatechange=function() {
+                           if (statuschange.readyState==4) {
+                           
+                           
+                           }
+                           else
+                           {
+                           }
+                           }
+                           statuschange.send(reportplace);
+                           
+                           var reportclear1 = '<entry xmlns="http://www.w3.org/2005/Atom" xmlns:gs="http://schemas.google.com/spreadsheets/2006"><id>https://spreadsheets.google.com/feeds/cells/0Arbwqwx7QLn7dFdPRThGZFphbTVFNVh0QUV4Y2VobXc/6/private/full/R'+(row+5)+'C8</id><link rel="edit" type="application/atom+xml" href="https://spreadsheets.google.com/feeds/cells/0Arbwqwx7QLn7dFdPRThGZFphbTVFNVh0QUV4Y2VobXc/6/private/full/R'+(row+5)+'C8"/><gs:cell row="'+(row+5)+'" col="8" inputValue=""/></entry>';
+                           
+                           var statuschange = new XMLHttpRequest();
+                           statuschange.open('PUT','https://spreadsheets.google.com/feeds/cells/0Arbwqwx7QLn7dFdPRThGZFphbTVFNVh0QUV4Y2VobXc/6/private/full/R'+(row+5)+'C8');
+                           statuschange.setRequestHeader('Authorization','Bearer ' + localStorage.Token);
+                           statuschange.setRequestHeader('content-type','application/atom+xml');
+                           statuschange.setRequestHeader('Gdata-version','3.0');
+                           statuschange.setRequestHeader('if-match','*');
+                           statuschange.onreadystatechange=function() {
+                           if (statuschange.readyState==4) {
+                           
+                           
+                           }
+                           else
+                           {
+                           }
+                           }
+                           statuschange.send(reportclear1);
+                           
+                           var reportclear2 = '<entry xmlns="http://www.w3.org/2005/Atom" xmlns:gs="http://schemas.google.com/spreadsheets/2006"><id>https://spreadsheets.google.com/feeds/cells/0Arbwqwx7QLn7dFdPRThGZFphbTVFNVh0QUV4Y2VobXc/6/private/full/R'+(row+5)+'C7</id><link rel="edit" type="application/atom+xml" href="https://spreadsheets.google.com/feeds/cells/0Arbwqwx7QLn7dFdPRThGZFphbTVFNVh0QUV4Y2VobXc/6/private/full/R'+(row+5)+'C7"/><gs:cell row="'+(row+5)+'" col="7" inputValue=""/></entry>';
+                           
+                           var statuschange = new XMLHttpRequest();
+                           statuschange.open('PUT','https://spreadsheets.google.com/feeds/cells/0Arbwqwx7QLn7dFdPRThGZFphbTVFNVh0QUV4Y2VobXc/6/private/full/R'+(row+5)+'C7');
+                           statuschange.setRequestHeader('Authorization','Bearer ' + localStorage.Token);
+                           statuschange.setRequestHeader('content-type','application/atom+xml');
+                           statuschange.setRequestHeader('Gdata-version','3.0');
+                           statuschange.setRequestHeader('if-match','*');
+                           statuschange.onreadystatechange=function() {
+                           if (statuschange.readyState==4) {
+                           
+                           
+                           }
+                           else
+                           {
+                           }
+                           }
+                           statuschange.send(reportclear2);
+                           
+                           
+                           
+                           
+                           
+                           
+                           Bcode="";
+                           
+                           
+                           }
+                           
+                           else if(branch==2)
+                           {
+                           
+                           var goodElement = '<entry xmlns="http://www.w3.org/2005/Atom" xmlns:gs="http://schemas.google.com/spreadsheets/2006"><id>https://spreadsheets.google.com/feeds/cells/0Arbwqwx7QLn7dFdPRThGZFphbTVFNVh0QUV4Y2VobXc/2/private/full/R'+row+'C10</id><link rel="edit" type="application/atom+xml" href="https://spreadsheets.google.com/feeds/cells/0Arbwqwx7QLn7dFdPRThGZFphbTVFNVh0QUV4Y2VobXc/2/private/full/R'+row+'C10"/><gs:cell row="'+row+'" col="10" inputValue="3"/></entry>';
+                           
+                           var statuschange = new XMLHttpRequest();
+                           statuschange.open('PUT','https://spreadsheets.google.com/feeds/cells/0Arbwqwx7QLn7dFdPRThGZFphbTVFNVh0QUV4Y2VobXc/2/private/full/R'+row+'10');
+                           statuschange.setRequestHeader('Authorization','Bearer ' + localStorage.Token);
+                           statuschange.setRequestHeader('content-type','application/atom+xml');
+                           statuschange.setRequestHeader('Gdata-version','3.0');
+                           statuschange.setRequestHeader('if-match','*');
+                           statuschange.onreadystatechange=function() {
+                           if (statuschange.readyState==4) {
+                           //alert("Status"+statuschange.status);
+                           updateDB();
+                           }
+                           else
+                           {
+                           }
+                           }
+                           statuschange.send(goodElement);
+                           
+                           
+                           
+                           var badElement = '<entry xmlns="http://www.w3.org/2005/Atom" xmlns:gs="http://schemas.google.com/spreadsheets/2006"><id>https://spreadsheets.google.com/feeds/cells/0Arbwqwx7QLn7dFdPRThGZFphbTVFNVh0QUV4Y2VobXc/2/private/full/R'+row+'C12</id><link rel="edit" type="application/atom+xml" href="https://spreadsheets.google.com/feeds/cells/0Arbwqwx7QLn7dFdPRThGZFphbTVFNVh0QUV4Y2VobXc/2/private/full/R'+row+'C12"/><gs:cell row="'+row+'" col="12" inputValue="'+jQuery.now()+'"/></entry>';
+                           
+                           var statuschange = new XMLHttpRequest();
+                           statuschange.open('PUT','https://spreadsheets.google.com/feeds/cells/0Arbwqwx7QLn7dFdPRThGZFphbTVFNVh0QUV4Y2VobXc/2/private/full/R'+row+'C12');
+                           statuschange.setRequestHeader('Authorization','Bearer ' + localStorage.Token);
+                           statuschange.setRequestHeader('content-type','application/atom+xml');
+                           statuschange.setRequestHeader('Gdata-version','3.0');
+                           statuschange.setRequestHeader('if-match','*');
+                           statuschange.onreadystatechange=function() {
+                           if (statuschange.readyState==4) {
+                           
+                           
+                           }
+                           else
+                           {
+                           }
+                           }
+                           statuschange.send(badElement);
+                           
+                           
+                           
+                           var placeelm = '<entry xmlns="http://www.w3.org/2005/Atom" xmlns:gs="http://schemas.google.com/spreadsheets/2006"><id>https://spreadsheets.google.com/feeds/cells/0Arbwqwx7QLn7dFdPRThGZFphbTVFNVh0QUV4Y2VobXc/2/private/full/R'+row+'C6</id><link rel="edit" type="application/atom+xml" href="https://spreadsheets.google.com/feeds/cells/0Arbwqwx7QLn7dFdPRThGZFphbTVFNVh0QUV4Y2VobXc/2/private/full/R'+row+'C6"/><gs:cell row="'+row+'" col="6" inputValue="'+document.getElementById('place').value+'"/></entry>';
+                           
+                           var statuschange = new XMLHttpRequest();
+                           statuschange.open('PUT','https://spreadsheets.google.com/feeds/cells/0Arbwqwx7QLn7dFdPRThGZFphbTVFNVh0QUV4Y2VobXc/2/private/full/R'+row+'C6');
+                           statuschange.setRequestHeader('Authorization','Bearer ' + localStorage.Token);
+                           statuschange.setRequestHeader('content-type','application/atom+xml');
+                           statuschange.setRequestHeader('Gdata-version','3.0');
+                           statuschange.setRequestHeader('if-match','*');
+                           statuschange.onreadystatechange=function() {
+                           if (statuschange.readyState==4) {
+                           
+                           
+                           }
+                           else
+                           {
+                           }
+                           }
+                           statuschange.send(placeelm);
+                           
+                           
+                           var reportelm = '<entry xmlns="http://www.w3.org/2005/Atom" xmlns:gs="http://schemas.google.com/spreadsheets/2006"><id>https://spreadsheets.google.com/feeds/cells/0Arbwqwx7QLn7dFdPRThGZFphbTVFNVh0QUV4Y2VobXc/7/private/full/R'+(row+5)+'C9</id><link rel="edit" type="application/atom+xml" href="https://spreadsheets.google.com/feeds/cells/0Arbwqwx7QLn7dFdPRThGZFphbTVFNVh0QUV4Y2VobXc/7/private/full/R'+(row+5)+'C9"/><gs:cell row="'+(row+5)+'" col="9" inputValue="/"/></entry>';
+                           
+                           var statuschange = new XMLHttpRequest();
+                           statuschange.open('PUT','https://spreadsheets.google.com/feeds/cells/0Arbwqwx7QLn7dFdPRThGZFphbTVFNVh0QUV4Y2VobXc/7/private/full/R'+(row+5)+'C9');
+                           statuschange.setRequestHeader('Authorization','Bearer ' + localStorage.Token);
+                           statuschange.setRequestHeader('content-type','application/atom+xml');
+                           statuschange.setRequestHeader('Gdata-version','3.0');
+                           statuschange.setRequestHeader('if-match','*');
+                           statuschange.onreadystatechange=function() {
+                           if (statuschange.readyState==4) {
+                           
+                           
+                           }
+                           else
+                           {
+                           }
+                           }
+                           statuschange.send(reportelm);
+                           
+                           var reportplace = '<entry xmlns="http://www.w3.org/2005/Atom" xmlns:gs="http://schemas.google.com/spreadsheets/2006"><id>https://spreadsheets.google.com/feeds/cells/0Arbwqwx7QLn7dFdPRThGZFphbTVFNVh0QUV4Y2VobXc/7/private/full/R'+(row+5)+'C6</id><link rel="edit" type="application/atom+xml" href="https://spreadsheets.google.com/feeds/cells/0Arbwqwx7QLn7dFdPRThGZFphbTVFNVh0QUV4Y2VobXc/7/private/full/R'+(row+5)+'C6"/><gs:cell row="'+(row+5)+'" col="6" inputValue="'+document.getElementById('place').value+'"/></entry>';
+                           
+                           var statuschange = new XMLHttpRequest();
+                           statuschange.open('PUT','https://spreadsheets.google.com/feeds/cells/0Arbwqwx7QLn7dFdPRThGZFphbTVFNVh0QUV4Y2VobXc/7/private/full/R'+(row+5)+'C6');
+                           statuschange.setRequestHeader('Authorization','Bearer ' + localStorage.Token);
+                           statuschange.setRequestHeader('content-type','application/atom+xml');
+                           statuschange.setRequestHeader('Gdata-version','3.0');
+                           statuschange.setRequestHeader('if-match','*');
+                           statuschange.onreadystatechange=function() {
+                           if (statuschange.readyState==4) {
+                           
+                           
+                           }
+                           else
+                           {
+                           }
+                           }
+                           statuschange.send(reportplace);
+                           
+                           var reportclear1 = '<entry xmlns="http://www.w3.org/2005/Atom" xmlns:gs="http://schemas.google.com/spreadsheets/2006"><id>https://spreadsheets.google.com/feeds/cells/0Arbwqwx7QLn7dFdPRThGZFphbTVFNVh0QUV4Y2VobXc/7/private/full/R'+(row+5)+'C8</id><link rel="edit" type="application/atom+xml" href="https://spreadsheets.google.com/feeds/cells/0Arbwqwx7QLn7dFdPRThGZFphbTVFNVh0QUV4Y2VobXc/7/private/full/R'+(row+5)+'C8"/><gs:cell row="'+(row+5)+'" col="8" inputValue=""/></entry>';
+                           
+                           var statuschange = new XMLHttpRequest();
+                           statuschange.open('PUT','https://spreadsheets.google.com/feeds/cells/0Arbwqwx7QLn7dFdPRThGZFphbTVFNVh0QUV4Y2VobXc/7/private/full/R'+(row+5)+'C8');
+                           statuschange.setRequestHeader('Authorization','Bearer ' + localStorage.Token);
+                           statuschange.setRequestHeader('content-type','application/atom+xml');
+                           statuschange.setRequestHeader('Gdata-version','3.0');
+                           statuschange.setRequestHeader('if-match','*');
+                           statuschange.onreadystatechange=function() {
+                           if (statuschange.readyState==4) {
+                           
+                           
+                           }
+                           else
+                           {
+                           }
+                           }
+                           statuschange.send(reportclear1);
+                           
+                           var reportclear2 = '<entry xmlns="http://www.w3.org/2005/Atom" xmlns:gs="http://schemas.google.com/spreadsheets/2006"><id>https://spreadsheets.google.com/feeds/cells/0Arbwqwx7QLn7dFdPRThGZFphbTVFNVh0QUV4Y2VobXc/7/private/full/R'+(row+5)+'C7</id><link rel="edit" type="application/atom+xml" href="https://spreadsheets.google.com/feeds/cells/0Arbwqwx7QLn7dFdPRThGZFphbTVFNVh0QUV4Y2VobXc/7/private/full/R'+(row+5)+'C7"/><gs:cell row="'+(row+5)+'" col="7" inputValue=""/></entry>';
+                           
+                           var statuschange = new XMLHttpRequest();
+                           statuschange.open('PUT','https://spreadsheets.google.com/feeds/cells/0Arbwqwx7QLn7dFdPRThGZFphbTVFNVh0QUV4Y2VobXc/7/private/full/R'+(row+5)+'C7');
+                           statuschange.setRequestHeader('Authorization','Bearer ' + localStorage.Token);
+                           statuschange.setRequestHeader('content-type','application/atom+xml');
+                           statuschange.setRequestHeader('Gdata-version','3.0');
+                           statuschange.setRequestHeader('if-match','*');
+                           statuschange.onreadystatechange=function() {
+                           if (statuschange.readyState==4) {
+                           
+                           
+                           }
+                           else
+                           {
+                           }
+                           }
+                           statuschange.send(reportclear2);
+                           
+                           
+                           
+                           
+                           
+                           
+                           Bcode="";
+                           
+                           
+                           }
+                           else if(branch==3)
+                           {
+                           var goodElement = '<entry xmlns="http://www.w3.org/2005/Atom" xmlns:gs="http://schemas.google.com/spreadsheets/2006"><id>https://spreadsheets.google.com/feeds/cells/0Arbwqwx7QLn7dFdPRThGZFphbTVFNVh0QUV4Y2VobXc/3/private/full/R'+row+'C10</id><link rel="edit" type="application/atom+xml" href="https://spreadsheets.google.com/feeds/cells/0Arbwqwx7QLn7dFdPRThGZFphbTVFNVh0QUV4Y2VobXc/3/private/full/R'+row+'C10"/><gs:cell row="'+row+'" col="10" inputValue="3"/></entry>';
+                           
+                           var statuschange = new XMLHttpRequest();
+                           statuschange.open('PUT','https://spreadsheets.google.com/feeds/cells/0Arbwqwx7QLn7dFdPRThGZFphbTVFNVh0QUV4Y2VobXc/3/private/full/R'+row+'C10');
+                           statuschange.setRequestHeader('Authorization','Bearer ' + localStorage.Token);
+                           statuschange.setRequestHeader('content-type','application/atom+xml');
+                           statuschange.setRequestHeader('Gdata-version','3.0');
+                           statuschange.setRequestHeader('if-match','*');
+                           statuschange.onreadystatechange=function() {
+                           if (statuschange.readyState==4) {
+                           //alert("Status"+statuschange.status);
+                           updateDB();
+                           }
+                           else
+                           {
+                           }
+                           }
+                           statuschange.send(goodElement);
+                           
+                           
+                           
+                           var badElement = '<entry xmlns="http://www.w3.org/2005/Atom" xmlns:gs="http://schemas.google.com/spreadsheets/2006"><id>https://spreadsheets.google.com/feeds/cells/0Arbwqwx7QLn7dFdPRThGZFphbTVFNVh0QUV4Y2VobXc/3/private/full/R'+row+'C12</id><link rel="edit" type="application/atom+xml" href="https://spreadsheets.google.com/feeds/cells/0Arbwqwx7QLn7dFdPRThGZFphbTVFNVh0QUV4Y2VobXc/3/private/full/R'+row+'C12"/><gs:cell row="'+row+'" col="12" inputValue="'+jQuery.now()+'"/></entry>';
+                           
+                           var statuschange = new XMLHttpRequest();
+                           statuschange.open('PUT','https://spreadsheets.google.com/feeds/cells/0Arbwqwx7QLn7dFdPRThGZFphbTVFNVh0QUV4Y2VobXc/3/private/full/R'+row+'C12');
+                           statuschange.setRequestHeader('Authorization','Bearer ' + localStorage.Token);
+                           statuschange.setRequestHeader('content-type','application/atom+xml');
+                           statuschange.setRequestHeader('Gdata-version','3.0');
+                           statuschange.setRequestHeader('if-match','*');
+                           statuschange.onreadystatechange=function() {
+                           if (statuschange.readyState==4) {
+                           
+                           
+                           }
+                           else
+                           {
+                           }
+                           }
+                           statuschange.send(badElement);
+                           
+                           
+                           
+                           var placeelm = '<entry xmlns="http://www.w3.org/2005/Atom" xmlns:gs="http://schemas.google.com/spreadsheets/2006"><id>https://spreadsheets.google.com/feeds/cells/0Arbwqwx7QLn7dFdPRThGZFphbTVFNVh0QUV4Y2VobXc/3/private/full/R'+row+'C6</id><link rel="edit" type="application/atom+xml" href="https://spreadsheets.google.com/feeds/cells/0Arbwqwx7QLn7dFdPRThGZFphbTVFNVh0QUV4Y2VobXc/3/private/full/R'+row+'C6"/><gs:cell row="'+row+'" col="6" inputValue="'+document.getElementById('place').value+'"/></entry>';
+                           
+                           var statuschange = new XMLHttpRequest();
+                           statuschange.open('PUT','https://spreadsheets.google.com/feeds/cells/0Arbwqwx7QLn7dFdPRThGZFphbTVFNVh0QUV4Y2VobXc/3/private/full/R'+row+'C6');
+                           statuschange.setRequestHeader('Authorization','Bearer ' + localStorage.Token);
+                           statuschange.setRequestHeader('content-type','application/atom+xml');
+                           statuschange.setRequestHeader('Gdata-version','3.0');
+                           statuschange.setRequestHeader('if-match','*');
+                           statuschange.onreadystatechange=function() {
+                           if (statuschange.readyState==4) {
+                           
+                           
+                           }
+                           else
+                           {
+                           }
+                           }
+                           statuschange.send(placeelm);
+                           
+                           
+                           var reportelm = '<entry xmlns="http://www.w3.org/2005/Atom" xmlns:gs="http://schemas.google.com/spreadsheets/2006"><id>https://spreadsheets.google.com/feeds/cells/0Arbwqwx7QLn7dFdPRThGZFphbTVFNVh0QUV4Y2VobXc/8/private/full/R'+(row+5)+'C9</id><link rel="edit" type="application/atom+xml" href="https://spreadsheets.google.com/feeds/cells/0Arbwqwx7QLn7dFdPRThGZFphbTVFNVh0QUV4Y2VobXc/8/private/full/R'+(row+5)+'C9"/><gs:cell row="'+(row+5)+'" col="9" inputValue="/"/></entry>';
+                           
+                           var statuschange = new XMLHttpRequest();
+                           statuschange.open('PUT','https://spreadsheets.google.com/feeds/cells/0Arbwqwx7QLn7dFdPRThGZFphbTVFNVh0QUV4Y2VobXc/8/private/full/R'+(row+5)+'C9');
+                           statuschange.setRequestHeader('Authorization','Bearer ' + localStorage.Token);
+                           statuschange.setRequestHeader('content-type','application/atom+xml');
+                           statuschange.setRequestHeader('Gdata-version','3.0');
+                           statuschange.setRequestHeader('if-match','*');
+                           statuschange.onreadystatechange=function() {
+                           if (statuschange.readyState==4) {
+                           
+                           
+                           }
+                           else
+                           {
+                           }
+                           }
+                           statuschange.send(reportelm);
+                           
+                           var reportplace = '<entry xmlns="http://www.w3.org/2005/Atom" xmlns:gs="http://schemas.google.com/spreadsheets/2006"><id>https://spreadsheets.google.com/feeds/cells/0Arbwqwx7QLn7dFdPRThGZFphbTVFNVh0QUV4Y2VobXc/8/private/full/R'+(row+5)+'C6</id><link rel="edit" type="application/atom+xml" href="https://spreadsheets.google.com/feeds/cells/0Arbwqwx7QLn7dFdPRThGZFphbTVFNVh0QUV4Y2VobXc/8/private/full/R'+(row+5)+'C6"/><gs:cell row="'+(row+5)+'" col="6" inputValue="'+document.getElementById('place').value+'"/></entry>';
+                           
+                           var statuschange = new XMLHttpRequest();
+                           statuschange.open('PUT','https://spreadsheets.google.com/feeds/cells/0Arbwqwx7QLn7dFdPRThGZFphbTVFNVh0QUV4Y2VobXc/8/private/full/R'+(row+5)+'C6');
+                           statuschange.setRequestHeader('Authorization','Bearer ' + localStorage.Token);
+                           statuschange.setRequestHeader('content-type','application/atom+xml');
+                           statuschange.setRequestHeader('Gdata-version','3.0');
+                           statuschange.setRequestHeader('if-match','*');
+                           statuschange.onreadystatechange=function() {
+                           if (statuschange.readyState==4) {
+                           
+                           
+                           }
+                           else
+                           {
+                           }
+                           }
+                           statuschange.send(reportplace);
+                           
+                           var reportclear1 = '<entry xmlns="http://www.w3.org/2005/Atom" xmlns:gs="http://schemas.google.com/spreadsheets/2006"><id>https://spreadsheets.google.com/feeds/cells/0Arbwqwx7QLn7dFdPRThGZFphbTVFNVh0QUV4Y2VobXc/8/private/full/R'+(row+5)+'C8</id><link rel="edit" type="application/atom+xml" href="https://spreadsheets.google.com/feeds/cells/0Arbwqwx7QLn7dFdPRThGZFphbTVFNVh0QUV4Y2VobXc/8/private/full/R'+(row+5)+'C8"/><gs:cell row="'+(row+5)+'" col="8" inputValue=""/></entry>';
+                           
+                           var statuschange = new XMLHttpRequest();
+                           statuschange.open('PUT','https://spreadsheets.google.com/feeds/cells/0Arbwqwx7QLn7dFdPRThGZFphbTVFNVh0QUV4Y2VobXc/8/private/full/R'+(row+5)+'C8');
+                           statuschange.setRequestHeader('Authorization','Bearer ' + localStorage.Token);
+                           statuschange.setRequestHeader('content-type','application/atom+xml');
+                           statuschange.setRequestHeader('Gdata-version','3.0');
+                           statuschange.setRequestHeader('if-match','*');
+                           statuschange.onreadystatechange=function() {
+                           if (statuschange.readyState==4) {
+                           
+                           
+                           }
+                           else
+                           {
+                           }
+                           }
+                           statuschange.send(reportclear1);
+                           
+                           var reportclear2 = '<entry xmlns="http://www.w3.org/2005/Atom" xmlns:gs="http://schemas.google.com/spreadsheets/2006"><id>https://spreadsheets.google.com/feeds/cells/0Arbwqwx7QLn7dFdPRThGZFphbTVFNVh0QUV4Y2VobXc/8/private/full/R'+(row+5)+'C7</id><link rel="edit" type="application/atom+xml" href="https://spreadsheets.google.com/feeds/cells/0Arbwqwx7QLn7dFdPRThGZFphbTVFNVh0QUV4Y2VobXc/8/private/full/R'+(row+5)+'C7"/><gs:cell row="'+(row+5)+'" col="7" inputValue=""/></entry>';
+                           
+                           var statuschange = new XMLHttpRequest();
+                           statuschange.open('PUT','https://spreadsheets.google.com/feeds/cells/0Arbwqwx7QLn7dFdPRThGZFphbTVFNVh0QUV4Y2VobXc/8/private/full/R'+(row+5)+'C7');
+                           statuschange.setRequestHeader('Authorization','Bearer ' + localStorage.Token);
+                           statuschange.setRequestHeader('content-type','application/atom+xml');
+                           statuschange.setRequestHeader('Gdata-version','3.0');
+                           statuschange.setRequestHeader('if-match','*');
+                           statuschange.onreadystatechange=function() {
+                           if (statuschange.readyState==4) {
+                           
+                           
+                           }
+                           else
+                           {
+                           }
+                           }
+                           statuschange.send(reportclear2);
+                           
+                           
+                           
+                           
+                           
+                           
+                           Bcode="";
+                           }
+
+                           }
+                         });
+
+            
+            
+            $("#bad").unbind("tap");
+            $("#bad").on('tap',function(evt)
+                         {
+                         evt.stopPropagation();
+                         evt.preventDefault();
+                         
+                         
+                         if(Bcode=="")
+                         {
+                        //alert("Form นี้ ได้จัดส่งรายงานแล้ว หากต้องการทำซ้ำหรือแก้ไขกรุณา Scan ใหม่อีกครั้ง");
+                         }
+                         else{
+                         if(branch==1)
+                         {
+                         var goodElement = '<entry xmlns="http://www.w3.org/2005/Atom" xmlns:gs="http://schemas.google.com/spreadsheets/2006"><id>https://spreadsheets.google.com/feeds/cells/0Arbwqwx7QLn7dFdPRThGZFphbTVFNVh0QUV4Y2VobXc/1/private/full/R'+row+'C10</id><link rel="edit" type="application/atom+xml" href="https://spreadsheets.google.com/feeds/cells/0Arbwqwx7QLn7dFdPRThGZFphbTVFNVh0QUV4Y2VobXc/1/private/full/R'+row+'C10"/><gs:cell row="'+row+'" col="10" inputValue="2"/></entry>';
+                         
+                         var statuschange = new XMLHttpRequest();
+                         statuschange.open('PUT','https://spreadsheets.google.com/feeds/cells/0Arbwqwx7QLn7dFdPRThGZFphbTVFNVh0QUV4Y2VobXc/1/private/full/R'+row+'C10');
+                         statuschange.setRequestHeader('Authorization','Bearer ' + localStorage.Token);
+                         statuschange.setRequestHeader('content-type','application/atom+xml');
+                         statuschange.setRequestHeader('Gdata-version','3.0');
+                         statuschange.setRequestHeader('if-match','*');
+                         statuschange.onreadystatechange=function() {
+                         if (statuschange.readyState==4) {
+                         //alert("Status"+statuschange.status);
+                         updateDB();
+                         }
+                         else
+                         {
+                         }
+                         }
+                         statuschange.send(goodElement);
+                         
+                         
+                         
+                         var badElement = '<entry xmlns="http://www.w3.org/2005/Atom" xmlns:gs="http://schemas.google.com/spreadsheets/2006"><id>https://spreadsheets.google.com/feeds/cells/0Arbwqwx7QLn7dFdPRThGZFphbTVFNVh0QUV4Y2VobXc/1/private/full/R'+row+'C12</id><link rel="edit" type="application/atom+xml" href="https://spreadsheets.google.com/feeds/cells/0Arbwqwx7QLn7dFdPRThGZFphbTVFNVh0QUV4Y2VobXc/1/private/full/R'+row+'C12"/><gs:cell row="'+row+'" col="12" inputValue="'+jQuery.now()+'"/></entry>';
+                         
+                         var statuschange = new XMLHttpRequest();
+                         statuschange.open('PUT','https://spreadsheets.google.com/feeds/cells/0Arbwqwx7QLn7dFdPRThGZFphbTVFNVh0QUV4Y2VobXc/1/private/full/R'+row+'C12');
+                         statuschange.setRequestHeader('Authorization','Bearer ' + localStorage.Token);
+                         statuschange.setRequestHeader('content-type','application/atom+xml');
+                         statuschange.setRequestHeader('Gdata-version','3.0');
+                         statuschange.setRequestHeader('if-match','*');
+                         statuschange.onreadystatechange=function() {
+                         if (statuschange.readyState==4) {
+                         
+                         
+                         }
+                         else
+                         {
+                         }
+                         }
+                         statuschange.send(badElement);
+                         
+                         
+                         
+                         var placeelm = '<entry xmlns="http://www.w3.org/2005/Atom" xmlns:gs="http://schemas.google.com/spreadsheets/2006"><id>https://spreadsheets.google.com/feeds/cells/0Arbwqwx7QLn7dFdPRThGZFphbTVFNVh0QUV4Y2VobXc/1/private/full/R'+row+'C6</id><link rel="edit" type="application/atom+xml" href="https://spreadsheets.google.com/feeds/cells/0Arbwqwx7QLn7dFdPRThGZFphbTVFNVh0QUV4Y2VobXc/1/private/full/R'+row+'C6"/><gs:cell row="'+row+'" col="6" inputValue="'+document.getElementById('place').value+'"/></entry>';
+                         
+                         var statuschange = new XMLHttpRequest();
+                         statuschange.open('PUT','https://spreadsheets.google.com/feeds/cells/0Arbwqwx7QLn7dFdPRThGZFphbTVFNVh0QUV4Y2VobXc/1/private/full/R'+row+'C6');
+                         statuschange.setRequestHeader('Authorization','Bearer ' + localStorage.Token);
+                         statuschange.setRequestHeader('content-type','application/atom+xml');
+                         statuschange.setRequestHeader('Gdata-version','3.0');
+                         statuschange.setRequestHeader('if-match','*');
+                         statuschange.onreadystatechange=function() {
+                         if (statuschange.readyState==4) {
+                         
+                         
+                         }
+                         else
+                         {
+                         }
+                         }
+                         statuschange.send(placeelm);
+                         
+                         
+                         var reportelm = '<entry xmlns="http://www.w3.org/2005/Atom" xmlns:gs="http://schemas.google.com/spreadsheets/2006"><id>https://spreadsheets.google.com/feeds/cells/0Arbwqwx7QLn7dFdPRThGZFphbTVFNVh0QUV4Y2VobXc/6/private/full/R'+(row+5)+'C8</id><link rel="edit" type="application/atom+xml" href="https://spreadsheets.google.com/feeds/cells/0Arbwqwx7QLn7dFdPRThGZFphbTVFNVh0QUV4Y2VobXc/6/private/full/R'+(row+5)+'C8"/><gs:cell row="'+(row+5)+'" col="8" inputValue="/"/></entry>';
+                         
+                         var statuschange = new XMLHttpRequest();
+                         statuschange.open('PUT','https://spreadsheets.google.com/feeds/cells/0Arbwqwx7QLn7dFdPRThGZFphbTVFNVh0QUV4Y2VobXc/6/private/full/R'+(row+5)+'C8');
+                         statuschange.setRequestHeader('Authorization','Bearer ' + localStorage.Token);
+                         statuschange.setRequestHeader('content-type','application/atom+xml');
+                         statuschange.setRequestHeader('Gdata-version','3.0');
+                         statuschange.setRequestHeader('if-match','*');
+                         statuschange.onreadystatechange=function() {
+                         if (statuschange.readyState==4) {
+                         
+                         
+                         }
+                         else
+                         {
+                         }
+                         }
+                         statuschange.send(reportelm);
+                         
+                         var reportplace = '<entry xmlns="http://www.w3.org/2005/Atom" xmlns:gs="http://schemas.google.com/spreadsheets/2006"><id>https://spreadsheets.google.com/feeds/cells/0Arbwqwx7QLn7dFdPRThGZFphbTVFNVh0QUV4Y2VobXc/6/private/full/R'+(row+5)+'C6</id><link rel="edit" type="application/atom+xml" href="https://spreadsheets.google.com/feeds/cells/0Arbwqwx7QLn7dFdPRThGZFphbTVFNVh0QUV4Y2VobXc/6/private/full/R'+(row+5)+'C6"/><gs:cell row="'+(row+5)+'" col="6" inputValue="'+document.getElementById('place').value+'"/></entry>';
+                         
+                         var statuschange = new XMLHttpRequest();
+                         statuschange.open('PUT','https://spreadsheets.google.com/feeds/cells/0Arbwqwx7QLn7dFdPRThGZFphbTVFNVh0QUV4Y2VobXc/6/private/full/R'+(row+5)+'C6');
+                         statuschange.setRequestHeader('Authorization','Bearer ' + localStorage.Token);
+                         statuschange.setRequestHeader('content-type','application/atom+xml');
+                         statuschange.setRequestHeader('Gdata-version','3.0');
+                         statuschange.setRequestHeader('if-match','*');
+                         statuschange.onreadystatechange=function() {
+                         if (statuschange.readyState==4) {
+                         
+                         
+                         }
+                         else
+                         {
+                         }
+                         }
+                         statuschange.send(reportplace);
+                         
+                         var reportclear1 = '<entry xmlns="http://www.w3.org/2005/Atom" xmlns:gs="http://schemas.google.com/spreadsheets/2006"><id>https://spreadsheets.google.com/feeds/cells/0Arbwqwx7QLn7dFdPRThGZFphbTVFNVh0QUV4Y2VobXc/6/private/full/R'+(row+5)+'C7</id><link rel="edit" type="application/atom+xml" href="https://spreadsheets.google.com/feeds/cells/0Arbwqwx7QLn7dFdPRThGZFphbTVFNVh0QUV4Y2VobXc/6/private/full/R'+(row+5)+'C7"/><gs:cell row="'+(row+5)+'" col="7" inputValue=""/></entry>';
+                         
+                         var statuschange = new XMLHttpRequest();
+                         statuschange.open('PUT','https://spreadsheets.google.com/feeds/cells/0Arbwqwx7QLn7dFdPRThGZFphbTVFNVh0QUV4Y2VobXc/6/private/full/R'+(row+5)+'C7');
+                         statuschange.setRequestHeader('Authorization','Bearer ' + localStorage.Token);
+                         statuschange.setRequestHeader('content-type','application/atom+xml');
+                         statuschange.setRequestHeader('Gdata-version','3.0');
+                         statuschange.setRequestHeader('if-match','*');
+                         statuschange.onreadystatechange=function() {
+                         if (statuschange.readyState==4) {
+                         
+                         
+                         }
+                         else
+                         {
+                         }
+                         }
+                         statuschange.send(reportclear1);
+                         
+                         var reportclear2 = '<entry xmlns="http://www.w3.org/2005/Atom" xmlns:gs="http://schemas.google.com/spreadsheets/2006"><id>https://spreadsheets.google.com/feeds/cells/0Arbwqwx7QLn7dFdPRThGZFphbTVFNVh0QUV4Y2VobXc/6/private/full/R'+(row+5)+'C9</id><link rel="edit" type="application/atom+xml" href="https://spreadsheets.google.com/feeds/cells/0Arbwqwx7QLn7dFdPRThGZFphbTVFNVh0QUV4Y2VobXc/6/private/full/R'+(row+5)+'C9"/><gs:cell row="'+(row+5)+'" col="9" inputValue=""/></entry>';
+                         
+                         var statuschange = new XMLHttpRequest();
+                         statuschange.open('PUT','https://spreadsheets.google.com/feeds/cells/0Arbwqwx7QLn7dFdPRThGZFphbTVFNVh0QUV4Y2VobXc/6/private/full/R'+(row+5)+'C9');
+                         statuschange.setRequestHeader('Authorization','Bearer ' + localStorage.Token);
+                         statuschange.setRequestHeader('content-type','application/atom+xml');
+                         statuschange.setRequestHeader('Gdata-version','3.0');
+                         statuschange.setRequestHeader('if-match','*');
+                         statuschange.onreadystatechange=function() {
+                         if (statuschange.readyState==4) {
+                         
+                         
+                         }
+                         else
+                         {
+                         }
+                         }
+                         statuschange.send(reportclear2);
+                         
+                         
+                         
+                         
+                         
+                         
+                         Bcode="";
+                         
+                         
+                         }
+                         
+                         else if(branch==2)
+                         {
+                         
+                         var goodElement = '<entry xmlns="http://www.w3.org/2005/Atom" xmlns:gs="http://schemas.google.com/spreadsheets/2006"><id>https://spreadsheets.google.com/feeds/cells/0Arbwqwx7QLn7dFdPRThGZFphbTVFNVh0QUV4Y2VobXc/2/private/full/R'+row+'C10</id><link rel="edit" type="application/atom+xml" href="https://spreadsheets.google.com/feeds/cells/0Arbwqwx7QLn7dFdPRThGZFphbTVFNVh0QUV4Y2VobXc/2/private/full/R'+row+'C10"/><gs:cell row="'+row+'" col="10" inputValue="2"/></entry>';
+                         
+                         var statuschange = new XMLHttpRequest();
+                         statuschange.open('PUT','https://spreadsheets.google.com/feeds/cells/0Arbwqwx7QLn7dFdPRThGZFphbTVFNVh0QUV4Y2VobXc/2/private/full/R'+row+'10');
+                         statuschange.setRequestHeader('Authorization','Bearer ' + localStorage.Token);
+                         statuschange.setRequestHeader('content-type','application/atom+xml');
+                         statuschange.setRequestHeader('Gdata-version','3.0');
+                         statuschange.setRequestHeader('if-match','*');
+                         statuschange.onreadystatechange=function() {
+                         if (statuschange.readyState==4) {
+                         //alert("Status"+statuschange.status);
+                         updateDB();
+                         }
+                         else
+                         {
+                         }
+                         }
+                         statuschange.send(goodElement);
+                         
+                         
+                         
+                         var badElement = '<entry xmlns="http://www.w3.org/2005/Atom" xmlns:gs="http://schemas.google.com/spreadsheets/2006"><id>https://spreadsheets.google.com/feeds/cells/0Arbwqwx7QLn7dFdPRThGZFphbTVFNVh0QUV4Y2VobXc/2/private/full/R'+row+'C12</id><link rel="edit" type="application/atom+xml" href="https://spreadsheets.google.com/feeds/cells/0Arbwqwx7QLn7dFdPRThGZFphbTVFNVh0QUV4Y2VobXc/2/private/full/R'+row+'C12"/><gs:cell row="'+row+'" col="12" inputValue="'+jQuery.now()+'"/></entry>';
+                         
+                         var statuschange = new XMLHttpRequest();
+                         statuschange.open('PUT','https://spreadsheets.google.com/feeds/cells/0Arbwqwx7QLn7dFdPRThGZFphbTVFNVh0QUV4Y2VobXc/2/private/full/R'+row+'C12');
+                         statuschange.setRequestHeader('Authorization','Bearer ' + localStorage.Token);
+                         statuschange.setRequestHeader('content-type','application/atom+xml');
+                         statuschange.setRequestHeader('Gdata-version','3.0');
+                         statuschange.setRequestHeader('if-match','*');
+                         statuschange.onreadystatechange=function() {
+                         if (statuschange.readyState==4) {
+                         
+                         
+                         }
+                         else
+                         {
+                         }
+                         }
+                         statuschange.send(badElement);
+                         
+                         
+                         
+                         var placeelm = '<entry xmlns="http://www.w3.org/2005/Atom" xmlns:gs="http://schemas.google.com/spreadsheets/2006"><id>https://spreadsheets.google.com/feeds/cells/0Arbwqwx7QLn7dFdPRThGZFphbTVFNVh0QUV4Y2VobXc/2/private/full/R'+row+'C6</id><link rel="edit" type="application/atom+xml" href="https://spreadsheets.google.com/feeds/cells/0Arbwqwx7QLn7dFdPRThGZFphbTVFNVh0QUV4Y2VobXc/2/private/full/R'+row+'C6"/><gs:cell row="'+row+'" col="6" inputValue="'+document.getElementById('place').value+'"/></entry>';
+                         
+                         var statuschange = new XMLHttpRequest();
+                         statuschange.open('PUT','https://spreadsheets.google.com/feeds/cells/0Arbwqwx7QLn7dFdPRThGZFphbTVFNVh0QUV4Y2VobXc/2/private/full/R'+row+'C6');
+                         statuschange.setRequestHeader('Authorization','Bearer ' + localStorage.Token);
+                         statuschange.setRequestHeader('content-type','application/atom+xml');
+                         statuschange.setRequestHeader('Gdata-version','3.0');
+                         statuschange.setRequestHeader('if-match','*');
+                         statuschange.onreadystatechange=function() {
+                         if (statuschange.readyState==4) {
+                         
+                         
+                         }
+                         else
+                         {
+                         }
+                         }
+                         statuschange.send(placeelm);
+                         
+                         
+                         var reportelm = '<entry xmlns="http://www.w3.org/2005/Atom" xmlns:gs="http://schemas.google.com/spreadsheets/2006"><id>https://spreadsheets.google.com/feeds/cells/0Arbwqwx7QLn7dFdPRThGZFphbTVFNVh0QUV4Y2VobXc/7/private/full/R'+(row+5)+'C8</id><link rel="edit" type="application/atom+xml" href="https://spreadsheets.google.com/feeds/cells/0Arbwqwx7QLn7dFdPRThGZFphbTVFNVh0QUV4Y2VobXc/7/private/full/R'+(row+5)+'C8"/><gs:cell row="'+(row+5)+'" col="8" inputValue="/"/></entry>';
+                         
+                         var statuschange = new XMLHttpRequest();
+                         statuschange.open('PUT','https://spreadsheets.google.com/feeds/cells/0Arbwqwx7QLn7dFdPRThGZFphbTVFNVh0QUV4Y2VobXc/7/private/full/R'+(row+5)+'C8');
+                         statuschange.setRequestHeader('Authorization','Bearer ' + localStorage.Token);
+                         statuschange.setRequestHeader('content-type','application/atom+xml');
+                         statuschange.setRequestHeader('Gdata-version','3.0');
+                         statuschange.setRequestHeader('if-match','*');
+                         statuschange.onreadystatechange=function() {
+                         if (statuschange.readyState==4) {
+                         
+                         
+                         }
+                         else
+                         {
+                         }
+                         }
+                         statuschange.send(reportelm);
+                         
+                         var reportplace = '<entry xmlns="http://www.w3.org/2005/Atom" xmlns:gs="http://schemas.google.com/spreadsheets/2006"><id>https://spreadsheets.google.com/feeds/cells/0Arbwqwx7QLn7dFdPRThGZFphbTVFNVh0QUV4Y2VobXc/7/private/full/R'+(row+5)+'C6</id><link rel="edit" type="application/atom+xml" href="https://spreadsheets.google.com/feeds/cells/0Arbwqwx7QLn7dFdPRThGZFphbTVFNVh0QUV4Y2VobXc/7/private/full/R'+(row+5)+'C6"/><gs:cell row="'+(row+5)+'" col="6" inputValue="'+document.getElementById('place').value+'"/></entry>';
+                         
+                         var statuschange = new XMLHttpRequest();
+                         statuschange.open('PUT','https://spreadsheets.google.com/feeds/cells/0Arbwqwx7QLn7dFdPRThGZFphbTVFNVh0QUV4Y2VobXc/7/private/full/R'+(row+5)+'C6');
+                         statuschange.setRequestHeader('Authorization','Bearer ' + localStorage.Token);
+                         statuschange.setRequestHeader('content-type','application/atom+xml');
+                         statuschange.setRequestHeader('Gdata-version','3.0');
+                         statuschange.setRequestHeader('if-match','*');
+                         statuschange.onreadystatechange=function() {
+                         if (statuschange.readyState==4) {
+                         
+                         
+                         }
+                         else
+                         {
+                         }
+                         }
+                         statuschange.send(reportplace);
+                         
+                         var reportclear1 = '<entry xmlns="http://www.w3.org/2005/Atom" xmlns:gs="http://schemas.google.com/spreadsheets/2006"><id>https://spreadsheets.google.com/feeds/cells/0Arbwqwx7QLn7dFdPRThGZFphbTVFNVh0QUV4Y2VobXc/7/private/full/R'+(row+5)+'C7</id><link rel="edit" type="application/atom+xml" href="https://spreadsheets.google.com/feeds/cells/0Arbwqwx7QLn7dFdPRThGZFphbTVFNVh0QUV4Y2VobXc/7/private/full/R'+(row+5)+'C7"/><gs:cell row="'+(row+5)+'" col="7" inputValue=""/></entry>';
+                         
+                         var statuschange = new XMLHttpRequest();
+                         statuschange.open('PUT','https://spreadsheets.google.com/feeds/cells/0Arbwqwx7QLn7dFdPRThGZFphbTVFNVh0QUV4Y2VobXc/7/private/full/R'+(row+5)+'C7');
+                         statuschange.setRequestHeader('Authorization','Bearer ' + localStorage.Token);
+                         statuschange.setRequestHeader('content-type','application/atom+xml');
+                         statuschange.setRequestHeader('Gdata-version','3.0');
+                         statuschange.setRequestHeader('if-match','*');
+                         statuschange.onreadystatechange=function() {
+                         if (statuschange.readyState==4) {
+                         
+                         
+                         }
+                         else
+                         {
+                         }
+                         }
+                         statuschange.send(reportclear1);
+                         
+                         var reportclear2 = '<entry xmlns="http://www.w3.org/2005/Atom" xmlns:gs="http://schemas.google.com/spreadsheets/2006"><id>https://spreadsheets.google.com/feeds/cells/0Arbwqwx7QLn7dFdPRThGZFphbTVFNVh0QUV4Y2VobXc/7/private/full/R'+(row+5)+'C9</id><link rel="edit" type="application/atom+xml" href="https://spreadsheets.google.com/feeds/cells/0Arbwqwx7QLn7dFdPRThGZFphbTVFNVh0QUV4Y2VobXc/7/private/full/R'+(row+5)+'C9"/><gs:cell row="'+(row+5)+'" col="9" inputValue=""/></entry>';
+                         
+                         var statuschange = new XMLHttpRequest();
+                         statuschange.open('PUT','https://spreadsheets.google.com/feeds/cells/0Arbwqwx7QLn7dFdPRThGZFphbTVFNVh0QUV4Y2VobXc/7/private/full/R'+(row+5)+'C9');
+                         statuschange.setRequestHeader('Authorization','Bearer ' + localStorage.Token);
+                         statuschange.setRequestHeader('content-type','application/atom+xml');
+                         statuschange.setRequestHeader('Gdata-version','3.0');
+                         statuschange.setRequestHeader('if-match','*');
+                         statuschange.onreadystatechange=function() {
+                         if (statuschange.readyState==4) {
+                         
+                         
+                         }
+                         else
+                         {
+                         }
+                         }
+                         statuschange.send(reportclear2);
+                         
+                         
+                         
+                         
+                         
+                         
+                         Bcode="";
+                         
+                         
+                         }
+                         else if(branch==3)
+                         {
+                         var goodElement = '<entry xmlns="http://www.w3.org/2005/Atom" xmlns:gs="http://schemas.google.com/spreadsheets/2006"><id>https://spreadsheets.google.com/feeds/cells/0Arbwqwx7QLn7dFdPRThGZFphbTVFNVh0QUV4Y2VobXc/3/private/full/R'+row+'C10</id><link rel="edit" type="application/atom+xml" href="https://spreadsheets.google.com/feeds/cells/0Arbwqwx7QLn7dFdPRThGZFphbTVFNVh0QUV4Y2VobXc/3/private/full/R'+row+'C10"/><gs:cell row="'+row+'" col="10" inputValue="2"/></entry>';
+                         
+                         var statuschange = new XMLHttpRequest();
+                         statuschange.open('PUT','https://spreadsheets.google.com/feeds/cells/0Arbwqwx7QLn7dFdPRThGZFphbTVFNVh0QUV4Y2VobXc/3/private/full/R'+row+'C10');
+                         statuschange.setRequestHeader('Authorization','Bearer ' + localStorage.Token);
+                         statuschange.setRequestHeader('content-type','application/atom+xml');
+                         statuschange.setRequestHeader('Gdata-version','3.0');
+                         statuschange.setRequestHeader('if-match','*');
+                         statuschange.onreadystatechange=function() {
+                         if (statuschange.readyState==4) {
+                         //alert("Status"+statuschange.status);
+                         updateDB();
+                         }
+                         else
+                         {
+                         }
+                         }
+                         statuschange.send(goodElement);
+                         
+                         
+                         
+                         var badElement = '<entry xmlns="http://www.w3.org/2005/Atom" xmlns:gs="http://schemas.google.com/spreadsheets/2006"><id>https://spreadsheets.google.com/feeds/cells/0Arbwqwx7QLn7dFdPRThGZFphbTVFNVh0QUV4Y2VobXc/3/private/full/R'+row+'C12</id><link rel="edit" type="application/atom+xml" href="https://spreadsheets.google.com/feeds/cells/0Arbwqwx7QLn7dFdPRThGZFphbTVFNVh0QUV4Y2VobXc/3/private/full/R'+row+'C12"/><gs:cell row="'+row+'" col="12" inputValue="'+jQuery.now()+'"/></entry>';
+                         
+                         var statuschange = new XMLHttpRequest();
+                         statuschange.open('PUT','https://spreadsheets.google.com/feeds/cells/0Arbwqwx7QLn7dFdPRThGZFphbTVFNVh0QUV4Y2VobXc/3/private/full/R'+row+'C12');
+                         statuschange.setRequestHeader('Authorization','Bearer ' + localStorage.Token);
+                         statuschange.setRequestHeader('content-type','application/atom+xml');
+                         statuschange.setRequestHeader('Gdata-version','3.0');
+                         statuschange.setRequestHeader('if-match','*');
+                         statuschange.onreadystatechange=function() {
+                         if (statuschange.readyState==4) {
+                         
+                         
+                         }
+                         else
+                         {
+                         }
+                         }
+                         statuschange.send(badElement);
+                         
+                         
+                         
+                         var placeelm = '<entry xmlns="http://www.w3.org/2005/Atom" xmlns:gs="http://schemas.google.com/spreadsheets/2006"><id>https://spreadsheets.google.com/feeds/cells/0Arbwqwx7QLn7dFdPRThGZFphbTVFNVh0QUV4Y2VobXc/3/private/full/R'+row+'C6</id><link rel="edit" type="application/atom+xml" href="https://spreadsheets.google.com/feeds/cells/0Arbwqwx7QLn7dFdPRThGZFphbTVFNVh0QUV4Y2VobXc/3/private/full/R'+row+'C6"/><gs:cell row="'+row+'" col="6" inputValue="'+document.getElementById('place').value+'"/></entry>';
+                         
+                         var statuschange = new XMLHttpRequest();
+                         statuschange.open('PUT','https://spreadsheets.google.com/feeds/cells/0Arbwqwx7QLn7dFdPRThGZFphbTVFNVh0QUV4Y2VobXc/3/private/full/R'+row+'C6');
+                         statuschange.setRequestHeader('Authorization','Bearer ' + localStorage.Token);
+                         statuschange.setRequestHeader('content-type','application/atom+xml');
+                         statuschange.setRequestHeader('Gdata-version','3.0');
+                         statuschange.setRequestHeader('if-match','*');
+                         statuschange.onreadystatechange=function() {
+                         if (statuschange.readyState==4) {
+                         
+                         
+                         }
+                         else
+                         {
+                         }
+                         }
+                         statuschange.send(placeelm);
+                         
+                         
+                         var reportelm = '<entry xmlns="http://www.w3.org/2005/Atom" xmlns:gs="http://schemas.google.com/spreadsheets/2006"><id>https://spreadsheets.google.com/feeds/cells/0Arbwqwx7QLn7dFdPRThGZFphbTVFNVh0QUV4Y2VobXc/8/private/full/R'+(row+5)+'C8</id><link rel="edit" type="application/atom+xml" href="https://spreadsheets.google.com/feeds/cells/0Arbwqwx7QLn7dFdPRThGZFphbTVFNVh0QUV4Y2VobXc/8/private/full/R'+(row+5)+'C7"/><gs:cell row="'+(row+5)+'" col="8" inputValue="/"/></entry>';
+                         
+                         var statuschange = new XMLHttpRequest();
+                         statuschange.open('PUT','https://spreadsheets.google.com/feeds/cells/0Arbwqwx7QLn7dFdPRThGZFphbTVFNVh0QUV4Y2VobXc/8/private/full/R'+(row+5)+'C8');
+                         statuschange.setRequestHeader('Authorization','Bearer ' + localStorage.Token);
+                         statuschange.setRequestHeader('content-type','application/atom+xml');
+                         statuschange.setRequestHeader('Gdata-version','3.0');
+                         statuschange.setRequestHeader('if-match','*');
+                         statuschange.onreadystatechange=function() {
+                         if (statuschange.readyState==4) {
+                         
+                         
+                         }
+                         else
+                         {
+                         }
+                         }
+                         statuschange.send(reportelm);
+                         
+                         var reportplace = '<entry xmlns="http://www.w3.org/2005/Atom" xmlns:gs="http://schemas.google.com/spreadsheets/2006"><id>https://spreadsheets.google.com/feeds/cells/0Arbwqwx7QLn7dFdPRThGZFphbTVFNVh0QUV4Y2VobXc/8/private/full/R'+(row+5)+'C6</id><link rel="edit" type="application/atom+xml" href="https://spreadsheets.google.com/feeds/cells/0Arbwqwx7QLn7dFdPRThGZFphbTVFNVh0QUV4Y2VobXc/8/private/full/R'+(row+5)+'C6"/><gs:cell row="'+(row+5)+'" col="6" inputValue="'+document.getElementById('place').value+'"/></entry>';
+                         
+                         var statuschange = new XMLHttpRequest();
+                         statuschange.open('PUT','https://spreadsheets.google.com/feeds/cells/0Arbwqwx7QLn7dFdPRThGZFphbTVFNVh0QUV4Y2VobXc/8/private/full/R'+(row+5)+'C6');
+                         statuschange.setRequestHeader('Authorization','Bearer ' + localStorage.Token);
+                         statuschange.setRequestHeader('content-type','application/atom+xml');
+                         statuschange.setRequestHeader('Gdata-version','3.0');
+                         statuschange.setRequestHeader('if-match','*');
+                         statuschange.onreadystatechange=function() {
+                         if (statuschange.readyState==4) {
+                         
+                         
+                         }
+                         else
+                         {
+                         }
+                         }
+                         statuschange.send(reportplace);
+                         
+                         var reportclear1 = '<entry xmlns="http://www.w3.org/2005/Atom" xmlns:gs="http://schemas.google.com/spreadsheets/2006"><id>https://spreadsheets.google.com/feeds/cells/0Arbwqwx7QLn7dFdPRThGZFphbTVFNVh0QUV4Y2VobXc/8/private/full/R'+(row+5)+'C7</id><link rel="edit" type="application/atom+xml" href="https://spreadsheets.google.com/feeds/cells/0Arbwqwx7QLn7dFdPRThGZFphbTVFNVh0QUV4Y2VobXc/8/private/full/R'+(row+5)+'C7"/><gs:cell row="'+(row+5)+'" col="7" inputValue=""/></entry>';
+                         
+                         var statuschange = new XMLHttpRequest();
+                         statuschange.open('PUT','https://spreadsheets.google.com/feeds/cells/0Arbwqwx7QLn7dFdPRThGZFphbTVFNVh0QUV4Y2VobXc/8/private/full/R'+(row+5)+'C7');
+                         statuschange.setRequestHeader('Authorization','Bearer ' + localStorage.Token);
+                         statuschange.setRequestHeader('content-type','application/atom+xml');
+                         statuschange.setRequestHeader('Gdata-version','3.0');
+                         statuschange.setRequestHeader('if-match','*');
+                         statuschange.onreadystatechange=function() {
+                         if (statuschange.readyState==4) {
+                         
+                         
+                         }
+                         else
+                         {
+                         }
+                         }
+                         statuschange.send(reportclear1);
+                         
+                         var reportclear2 = '<entry xmlns="http://www.w3.org/2005/Atom" xmlns:gs="http://schemas.google.com/spreadsheets/2006"><id>https://spreadsheets.google.com/feeds/cells/0Arbwqwx7QLn7dFdPRThGZFphbTVFNVh0QUV4Y2VobXc/8/private/full/R'+(row+5)+'C9</id><link rel="edit" type="application/atom+xml" href="https://spreadsheets.google.com/feeds/cells/0Arbwqwx7QLn7dFdPRThGZFphbTVFNVh0QUV4Y2VobXc/8/private/full/R'+(row+5)+'C9"/><gs:cell row="'+(row+5)+'" col="9" inputValue=""/></entry>';
+                         
+                         var statuschange = new XMLHttpRequest();
+                         statuschange.open('PUT','https://spreadsheets.google.com/feeds/cells/0Arbwqwx7QLn7dFdPRThGZFphbTVFNVh0QUV4Y2VobXc/8/private/full/R'+(row+5)+'C9');
+                         statuschange.setRequestHeader('Authorization','Bearer ' + localStorage.Token);
+                         statuschange.setRequestHeader('content-type','application/atom+xml');
+                         statuschange.setRequestHeader('Gdata-version','3.0');
+                         statuschange.setRequestHeader('if-match','*');
+                         statuschange.onreadystatechange=function() {
+                         if (statuschange.readyState==4) {
+                         
+                         
+                         }
+                         else
+                         {
+                         }
+                         }
+                         statuschange.send(reportclear2);
+                         
+                         
+                         
+                         
+                         
+                         
+                         Bcode="";
+                         }
+
+                         }
+                         
+                         });
+            
+             $("#statuscheck").unbind("tap");
+            
+            $("#statuscheck").on('tap', function(evt){
+                                 evt.stopPropagation();
+                                 evt.preventDefault();
+                                 //alert(document.getElementById('place').value);
+                                 
+                                 if(Bcode=="")
+                                 {
+                                 //alert("Form นี้ ได้จัดส่งรายงานแล้ว หากต้องการทำซ้ำหรือแก้ไขกรุณา Scan ใหม่อีกครั้ง");
+                                 }
+                                 else{
+                                 if(branch==1)
+                                 {
+                                 var goodElement = '<entry xmlns="http://www.w3.org/2005/Atom" xmlns:gs="http://schemas.google.com/spreadsheets/2006"><id>https://spreadsheets.google.com/feeds/cells/0Arbwqwx7QLn7dFdPRThGZFphbTVFNVh0QUV4Y2VobXc/1/private/full/R'+row+'C10</id><link rel="edit" type="application/atom+xml" href="https://spreadsheets.google.com/feeds/cells/0Arbwqwx7QLn7dFdPRThGZFphbTVFNVh0QUV4Y2VobXc/1/private/full/R'+row+'C10"/><gs:cell row="'+row+'" col="10" inputValue="1"/></entry>';
+                                 
+                                 var statuschange = new XMLHttpRequest();
+                                 statuschange.open('PUT','https://spreadsheets.google.com/feeds/cells/0Arbwqwx7QLn7dFdPRThGZFphbTVFNVh0QUV4Y2VobXc/1/private/full/R'+row+'C10');
+                                 statuschange.setRequestHeader('Authorization','Bearer ' + localStorage.Token);
+                                 statuschange.setRequestHeader('content-type','application/atom+xml');
+                                 statuschange.setRequestHeader('Gdata-version','3.0');
+                                 statuschange.setRequestHeader('if-match','*');
+                                 statuschange.onreadystatechange=function() {
+                                 if (statuschange.readyState==4) {
+                                 //alert("Status"+statuschange.status);
+                                 updateDB();
+                                 }
+                                 else
+                                 {
+                                 }
+                                 }
+                                 statuschange.send(goodElement);
+                                 
+                                 
+                                 
+                                 var badElement = '<entry xmlns="http://www.w3.org/2005/Atom" xmlns:gs="http://schemas.google.com/spreadsheets/2006"><id>https://spreadsheets.google.com/feeds/cells/0Arbwqwx7QLn7dFdPRThGZFphbTVFNVh0QUV4Y2VobXc/1/private/full/R'+row+'C12</id><link rel="edit" type="application/atom+xml" href="https://spreadsheets.google.com/feeds/cells/0Arbwqwx7QLn7dFdPRThGZFphbTVFNVh0QUV4Y2VobXc/1/private/full/R'+row+'C12"/><gs:cell row="'+row+'" col="12" inputValue="'+jQuery.now()+'"/></entry>';
+                                 
+                                 var statuschange = new XMLHttpRequest();
+                                 statuschange.open('PUT','https://spreadsheets.google.com/feeds/cells/0Arbwqwx7QLn7dFdPRThGZFphbTVFNVh0QUV4Y2VobXc/1/private/full/R'+row+'C12');
+                                 statuschange.setRequestHeader('Authorization','Bearer ' + localStorage.Token);
+                                 statuschange.setRequestHeader('content-type','application/atom+xml');
+                                 statuschange.setRequestHeader('Gdata-version','3.0');
+                                 statuschange.setRequestHeader('if-match','*');
+                                 statuschange.onreadystatechange=function() {
+                                 if (statuschange.readyState==4) {
+                                 
+                                 
+                                 }
+                                 else
+                                 {
+                                 }
+                                 }
+                                 statuschange.send(badElement);
+                                 
+                                 
+                                 
+                                 var placeelm = '<entry xmlns="http://www.w3.org/2005/Atom" xmlns:gs="http://schemas.google.com/spreadsheets/2006"><id>https://spreadsheets.google.com/feeds/cells/0Arbwqwx7QLn7dFdPRThGZFphbTVFNVh0QUV4Y2VobXc/1/private/full/R'+row+'C6</id><link rel="edit" type="application/atom+xml" href="https://spreadsheets.google.com/feeds/cells/0Arbwqwx7QLn7dFdPRThGZFphbTVFNVh0QUV4Y2VobXc/1/private/full/R'+row+'C6"/><gs:cell row="'+row+'" col="6" inputValue="'+document.getElementById('place').value+'"/></entry>';
+                                 
+                                 var statuschange = new XMLHttpRequest();
+                                 statuschange.open('PUT','https://spreadsheets.google.com/feeds/cells/0Arbwqwx7QLn7dFdPRThGZFphbTVFNVh0QUV4Y2VobXc/1/private/full/R'+row+'C6');
+                                 statuschange.setRequestHeader('Authorization','Bearer ' + localStorage.Token);
+                                 statuschange.setRequestHeader('content-type','application/atom+xml');
+                                 statuschange.setRequestHeader('Gdata-version','3.0');
+                                 statuschange.setRequestHeader('if-match','*');
+                                 statuschange.onreadystatechange=function() {
+                                 if (statuschange.readyState==4) {
+                                 
+                                 
+                                 }
+                                 else
+                                 {
+                                 }
+                                 }
+                                 statuschange.send(placeelm);
+                                 
+                                 
+                                 var reportelm = '<entry xmlns="http://www.w3.org/2005/Atom" xmlns:gs="http://schemas.google.com/spreadsheets/2006"><id>https://spreadsheets.google.com/feeds/cells/0Arbwqwx7QLn7dFdPRThGZFphbTVFNVh0QUV4Y2VobXc/6/private/full/R'+(row+5)+'C7</id><link rel="edit" type="application/atom+xml" href="https://spreadsheets.google.com/feeds/cells/0Arbwqwx7QLn7dFdPRThGZFphbTVFNVh0QUV4Y2VobXc/6/private/full/R'+(row+5)+'C7"/><gs:cell row="'+(row+5)+'" col="7" inputValue="/"/></entry>';
+                                 
+                                 var statuschange = new XMLHttpRequest();
+                                 statuschange.open('PUT','https://spreadsheets.google.com/feeds/cells/0Arbwqwx7QLn7dFdPRThGZFphbTVFNVh0QUV4Y2VobXc/6/private/full/R'+(row+5)+'C7');
+                                 statuschange.setRequestHeader('Authorization','Bearer ' + localStorage.Token);
+                                 statuschange.setRequestHeader('content-type','application/atom+xml');
+                                 statuschange.setRequestHeader('Gdata-version','3.0');
+                                 statuschange.setRequestHeader('if-match','*');
+                                 statuschange.onreadystatechange=function() {
+                                 if (statuschange.readyState==4) {
+                                 
+                                 
+                                 }
+                                 else
+                                 {
+                                 }
+                                 }
+                                 statuschange.send(reportelm);
+                                 
+                                 var reportplace = '<entry xmlns="http://www.w3.org/2005/Atom" xmlns:gs="http://schemas.google.com/spreadsheets/2006"><id>https://spreadsheets.google.com/feeds/cells/0Arbwqwx7QLn7dFdPRThGZFphbTVFNVh0QUV4Y2VobXc/6/private/full/R'+(row+5)+'C6</id><link rel="edit" type="application/atom+xml" href="https://spreadsheets.google.com/feeds/cells/0Arbwqwx7QLn7dFdPRThGZFphbTVFNVh0QUV4Y2VobXc/6/private/full/R'+(row+5)+'C6"/><gs:cell row="'+(row+5)+'" col="6" inputValue="'+document.getElementById('place').value+'"/></entry>';
+                                 
+                                 var statuschange = new XMLHttpRequest();
+                                 statuschange.open('PUT','https://spreadsheets.google.com/feeds/cells/0Arbwqwx7QLn7dFdPRThGZFphbTVFNVh0QUV4Y2VobXc/6/private/full/R'+(row+5)+'C6');
+                                 statuschange.setRequestHeader('Authorization','Bearer ' + localStorage.Token);
+                                 statuschange.setRequestHeader('content-type','application/atom+xml');
+                                 statuschange.setRequestHeader('Gdata-version','3.0');
+                                 statuschange.setRequestHeader('if-match','*');
+                                 statuschange.onreadystatechange=function() {
+                                 if (statuschange.readyState==4) {
+                                 
+                                 
+                                 }
+                                 else
+                                 {
+                                 }
+                                 }
+                                 statuschange.send(reportplace);
+                                 
+                                 var reportclear1 = '<entry xmlns="http://www.w3.org/2005/Atom" xmlns:gs="http://schemas.google.com/spreadsheets/2006"><id>https://spreadsheets.google.com/feeds/cells/0Arbwqwx7QLn7dFdPRThGZFphbTVFNVh0QUV4Y2VobXc/6/private/full/R'+(row+5)+'C8</id><link rel="edit" type="application/atom+xml" href="https://spreadsheets.google.com/feeds/cells/0Arbwqwx7QLn7dFdPRThGZFphbTVFNVh0QUV4Y2VobXc/6/private/full/R'+(row+5)+'C8"/><gs:cell row="'+(row+5)+'" col="8" inputValue=""/></entry>';
+                                 
+                                 var statuschange = new XMLHttpRequest();
+                                 statuschange.open('PUT','https://spreadsheets.google.com/feeds/cells/0Arbwqwx7QLn7dFdPRThGZFphbTVFNVh0QUV4Y2VobXc/6/private/full/R'+(row+5)+'C8');
+                                 statuschange.setRequestHeader('Authorization','Bearer ' + localStorage.Token);
+                                 statuschange.setRequestHeader('content-type','application/atom+xml');
+                                 statuschange.setRequestHeader('Gdata-version','3.0');
+                                 statuschange.setRequestHeader('if-match','*');
+                                 statuschange.onreadystatechange=function() {
+                                 if (statuschange.readyState==4) {
+                                 
+                                 
+                                 }
+                                 else
+                                 {
+                                 }
+                                 }
+                                 statuschange.send(reportclear1);
+                                 
+                                 var reportclear2 = '<entry xmlns="http://www.w3.org/2005/Atom" xmlns:gs="http://schemas.google.com/spreadsheets/2006"><id>https://spreadsheets.google.com/feeds/cells/0Arbwqwx7QLn7dFdPRThGZFphbTVFNVh0QUV4Y2VobXc/6/private/full/R'+(row+5)+'C9</id><link rel="edit" type="application/atom+xml" href="https://spreadsheets.google.com/feeds/cells/0Arbwqwx7QLn7dFdPRThGZFphbTVFNVh0QUV4Y2VobXc/6/private/full/R'+(row+5)+'C9"/><gs:cell row="'+(row+5)+'" col="9" inputValue=""/></entry>';
+                                 
+                                 var statuschange = new XMLHttpRequest();
+                                 statuschange.open('PUT','https://spreadsheets.google.com/feeds/cells/0Arbwqwx7QLn7dFdPRThGZFphbTVFNVh0QUV4Y2VobXc/6/private/full/R'+(row+5)+'C9');
+                                 statuschange.setRequestHeader('Authorization','Bearer ' + localStorage.Token);
+                                 statuschange.setRequestHeader('content-type','application/atom+xml');
+                                 statuschange.setRequestHeader('Gdata-version','3.0');
+                                 statuschange.setRequestHeader('if-match','*');
+                                 statuschange.onreadystatechange=function() {
+                                 if (statuschange.readyState==4) {
+                                 
+                                 
+                                 }
+                                 else
+                                 {
+                                 }
+                                 }
+                                 statuschange.send(reportclear2);
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 Bcode="";
+
+                                 
+                                 }
+                                 
+                                 else if(branch==2)
+                                 {
+                                 
+                                 var goodElement = '<entry xmlns="http://www.w3.org/2005/Atom" xmlns:gs="http://schemas.google.com/spreadsheets/2006"><id>https://spreadsheets.google.com/feeds/cells/0Arbwqwx7QLn7dFdPRThGZFphbTVFNVh0QUV4Y2VobXc/2/private/full/R'+row+'C10</id><link rel="edit" type="application/atom+xml" href="https://spreadsheets.google.com/feeds/cells/0Arbwqwx7QLn7dFdPRThGZFphbTVFNVh0QUV4Y2VobXc/2/private/full/R'+row+'C10"/><gs:cell row="'+row+'" col="10" inputValue="1"/></entry>';
+                                 
+                                 var statuschange = new XMLHttpRequest();
+                                 statuschange.open('PUT','https://spreadsheets.google.com/feeds/cells/0Arbwqwx7QLn7dFdPRThGZFphbTVFNVh0QUV4Y2VobXc/2/private/full/R'+row+'10');
+                                 statuschange.setRequestHeader('Authorization','Bearer ' + localStorage.Token);
+                                 statuschange.setRequestHeader('content-type','application/atom+xml');
+                                 statuschange.setRequestHeader('Gdata-version','3.0');
+                                 statuschange.setRequestHeader('if-match','*');
+                                 statuschange.onreadystatechange=function() {
+                                 if (statuschange.readyState==4) {
+                                 ////alert("Status"+statuschange.status);
+                                 updateDB();
+                                 }
+                                 else
+                                 {
+                                 }
+                                 }
+                                 statuschange.send(goodElement);
+                                 
+                                 
+                                 
+                                 var badElement = '<entry xmlns="http://www.w3.org/2005/Atom" xmlns:gs="http://schemas.google.com/spreadsheets/2006"><id>https://spreadsheets.google.com/feeds/cells/0Arbwqwx7QLn7dFdPRThGZFphbTVFNVh0QUV4Y2VobXc/2/private/full/R'+row+'C12</id><link rel="edit" type="application/atom+xml" href="https://spreadsheets.google.com/feeds/cells/0Arbwqwx7QLn7dFdPRThGZFphbTVFNVh0QUV4Y2VobXc/2/private/full/R'+row+'C12"/><gs:cell row="'+row+'" col="12" inputValue="'+jQuery.now()+'"/></entry>';
+                                 
+                                 var statuschange = new XMLHttpRequest();
+                                 statuschange.open('PUT','https://spreadsheets.google.com/feeds/cells/0Arbwqwx7QLn7dFdPRThGZFphbTVFNVh0QUV4Y2VobXc/2/private/full/R'+row+'C12');
+                                 statuschange.setRequestHeader('Authorization','Bearer ' + localStorage.Token);
+                                 statuschange.setRequestHeader('content-type','application/atom+xml');
+                                 statuschange.setRequestHeader('Gdata-version','3.0');
+                                 statuschange.setRequestHeader('if-match','*');
+                                 statuschange.onreadystatechange=function() {
+                                 if (statuschange.readyState==4) {
+                                 
+                                 
+                                 }
+                                 else
+                                 {
+                                 }
+                                 }
+                                 statuschange.send(badElement);
+                                 
+                                 
+                                 
+                                 var placeelm = '<entry xmlns="http://www.w3.org/2005/Atom" xmlns:gs="http://schemas.google.com/spreadsheets/2006"><id>https://spreadsheets.google.com/feeds/cells/0Arbwqwx7QLn7dFdPRThGZFphbTVFNVh0QUV4Y2VobXc/2/private/full/R'+row+'C6</id><link rel="edit" type="application/atom+xml" href="https://spreadsheets.google.com/feeds/cells/0Arbwqwx7QLn7dFdPRThGZFphbTVFNVh0QUV4Y2VobXc/2/private/full/R'+row+'C6"/><gs:cell row="'+row+'" col="6" inputValue="'+document.getElementById('place').value+'"/></entry>';
+                                 
+                                 var statuschange = new XMLHttpRequest();
+                                 statuschange.open('PUT','https://spreadsheets.google.com/feeds/cells/0Arbwqwx7QLn7dFdPRThGZFphbTVFNVh0QUV4Y2VobXc/2/private/full/R'+row+'C6');
+                                 statuschange.setRequestHeader('Authorization','Bearer ' + localStorage.Token);
+                                 statuschange.setRequestHeader('content-type','application/atom+xml');
+                                 statuschange.setRequestHeader('Gdata-version','3.0');
+                                 statuschange.setRequestHeader('if-match','*');
+                                 statuschange.onreadystatechange=function() {
+                                 if (statuschange.readyState==4) {
+                                 
+                                 
+                                 }
+                                 else
+                                 {
+                                 }
+                                 }
+                                 statuschange.send(placeelm);
+                                 
+                                 
+                                 var reportelm = '<entry xmlns="http://www.w3.org/2005/Atom" xmlns:gs="http://schemas.google.com/spreadsheets/2006"><id>https://spreadsheets.google.com/feeds/cells/0Arbwqwx7QLn7dFdPRThGZFphbTVFNVh0QUV4Y2VobXc/7/private/full/R'+(row+5)+'C7</id><link rel="edit" type="application/atom+xml" href="https://spreadsheets.google.com/feeds/cells/0Arbwqwx7QLn7dFdPRThGZFphbTVFNVh0QUV4Y2VobXc/7/private/full/R'+(row+5)+'C7"/><gs:cell row="'+(row+5)+'" col="7" inputValue="/"/></entry>';
+                                 
+                                 var statuschange = new XMLHttpRequest();
+                                 statuschange.open('PUT','https://spreadsheets.google.com/feeds/cells/0Arbwqwx7QLn7dFdPRThGZFphbTVFNVh0QUV4Y2VobXc/7/private/full/R'+(row+5)+'C7');
+                                 statuschange.setRequestHeader('Authorization','Bearer ' + localStorage.Token);
+                                 statuschange.setRequestHeader('content-type','application/atom+xml');
+                                 statuschange.setRequestHeader('Gdata-version','3.0');
+                                 statuschange.setRequestHeader('if-match','*');
+                                 statuschange.onreadystatechange=function() {
+                                 if (statuschange.readyState==4) {
+                                 
+                                 
+                                 }
+                                 else
+                                 {
+                                 }
+                                 }
+                                 statuschange.send(reportelm);
+                                 
+                                 var reportplace = '<entry xmlns="http://www.w3.org/2005/Atom" xmlns:gs="http://schemas.google.com/spreadsheets/2006"><id>https://spreadsheets.google.com/feeds/cells/0Arbwqwx7QLn7dFdPRThGZFphbTVFNVh0QUV4Y2VobXc/7/private/full/R'+(row+5)+'C6</id><link rel="edit" type="application/atom+xml" href="https://spreadsheets.google.com/feeds/cells/0Arbwqwx7QLn7dFdPRThGZFphbTVFNVh0QUV4Y2VobXc/7/private/full/R'+(row+5)+'C6"/><gs:cell row="'+(row+5)+'" col="6" inputValue="'+document.getElementById('place').value+'"/></entry>';
+                                 
+                                 var statuschange = new XMLHttpRequest();
+                                 statuschange.open('PUT','https://spreadsheets.google.com/feeds/cells/0Arbwqwx7QLn7dFdPRThGZFphbTVFNVh0QUV4Y2VobXc/7/private/full/R'+(row+5)+'C6');
+                                 statuschange.setRequestHeader('Authorization','Bearer ' + localStorage.Token);
+                                 statuschange.setRequestHeader('content-type','application/atom+xml');
+                                 statuschange.setRequestHeader('Gdata-version','3.0');
+                                 statuschange.setRequestHeader('if-match','*');
+                                 statuschange.onreadystatechange=function() {
+                                 if (statuschange.readyState==4) {
+                                 
+                                 
+                                 }
+                                 else
+                                 {
+                                 }
+                                 }
+                                 statuschange.send(reportplace);
+                                 
+                                 var reportclear1 = '<entry xmlns="http://www.w3.org/2005/Atom" xmlns:gs="http://schemas.google.com/spreadsheets/2006"><id>https://spreadsheets.google.com/feeds/cells/0Arbwqwx7QLn7dFdPRThGZFphbTVFNVh0QUV4Y2VobXc/7/private/full/R'+(row+5)+'C8</id><link rel="edit" type="application/atom+xml" href="https://spreadsheets.google.com/feeds/cells/0Arbwqwx7QLn7dFdPRThGZFphbTVFNVh0QUV4Y2VobXc/7/private/full/R'+(row+5)+'C8"/><gs:cell row="'+(row+5)+'" col="8" inputValue=""/></entry>';
+                                 
+                                 var statuschange = new XMLHttpRequest();
+                                 statuschange.open('PUT','https://spreadsheets.google.com/feeds/cells/0Arbwqwx7QLn7dFdPRThGZFphbTVFNVh0QUV4Y2VobXc/7/private/full/R'+(row+5)+'C8');
+                                 statuschange.setRequestHeader('Authorization','Bearer ' + localStorage.Token);
+                                 statuschange.setRequestHeader('content-type','application/atom+xml');
+                                 statuschange.setRequestHeader('Gdata-version','3.0');
+                                 statuschange.setRequestHeader('if-match','*');
+                                 statuschange.onreadystatechange=function() {
+                                 if (statuschange.readyState==4) {
+                                 
+                                 
+                                 }
+                                 else
+                                 {
+                                 }
+                                 }
+                                 statuschange.send(reportclear1);
+                                 
+                                 var reportclear2 = '<entry xmlns="http://www.w3.org/2005/Atom" xmlns:gs="http://schemas.google.com/spreadsheets/2006"><id>https://spreadsheets.google.com/feeds/cells/0Arbwqwx7QLn7dFdPRThGZFphbTVFNVh0QUV4Y2VobXc/7/private/full/R'+(row+5)+'C9</id><link rel="edit" type="application/atom+xml" href="https://spreadsheets.google.com/feeds/cells/0Arbwqwx7QLn7dFdPRThGZFphbTVFNVh0QUV4Y2VobXc/7/private/full/R'+(row+5)+'C9"/><gs:cell row="'+(row+5)+'" col="9" inputValue=""/></entry>';
+                                 
+                                 var statuschange = new XMLHttpRequest();
+                                 statuschange.open('PUT','https://spreadsheets.google.com/feeds/cells/0Arbwqwx7QLn7dFdPRThGZFphbTVFNVh0QUV4Y2VobXc/7/private/full/R'+(row+5)+'C9');
+                                 statuschange.setRequestHeader('Authorization','Bearer ' + localStorage.Token);
+                                 statuschange.setRequestHeader('content-type','application/atom+xml');
+                                 statuschange.setRequestHeader('Gdata-version','3.0');
+                                 statuschange.setRequestHeader('if-match','*');
+                                 statuschange.onreadystatechange=function() {
+                                 if (statuschange.readyState==4) {
+                                 
+                                 
+                                 }
+                                 else
+                                 {
+                                 }
+                                 }
+                                 statuschange.send(reportclear2);
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 Bcode="";
+
+                                 
+                                 }
+                                 else if(branch==3)
+                                 {
+                                 var goodElement = '<entry xmlns="http://www.w3.org/2005/Atom" xmlns:gs="http://schemas.google.com/spreadsheets/2006"><id>https://spreadsheets.google.com/feeds/cells/0Arbwqwx7QLn7dFdPRThGZFphbTVFNVh0QUV4Y2VobXc/3/private/full/R'+row+'C10</id><link rel="edit" type="application/atom+xml" href="https://spreadsheets.google.com/feeds/cells/0Arbwqwx7QLn7dFdPRThGZFphbTVFNVh0QUV4Y2VobXc/3/private/full/R'+row+'C10"/><gs:cell row="'+row+'" col="10" inputValue="1"/></entry>';
+                                 
+                                 var statuschange = new XMLHttpRequest();
+                                 statuschange.open('PUT','https://spreadsheets.google.com/feeds/cells/0Arbwqwx7QLn7dFdPRThGZFphbTVFNVh0QUV4Y2VobXc/3/private/full/R'+row+'C10');
+                                 statuschange.setRequestHeader('Authorization','Bearer ' + localStorage.Token);
+                                 statuschange.setRequestHeader('content-type','application/atom+xml');
+                                 statuschange.setRequestHeader('Gdata-version','3.0');
+                                 statuschange.setRequestHeader('if-match','*');
+                                 statuschange.onreadystatechange=function() {
+                                 if (statuschange.readyState==4) {
+                                 ////alert("Status"+statuschange.status);
+                                 updateDB();
+                                 }
+                                 else
+                                 {
+                                 }
+                                 }
+                                 statuschange.send(goodElement);
+                                 
+                                 
+                                 
+                                 var badElement = '<entry xmlns="http://www.w3.org/2005/Atom" xmlns:gs="http://schemas.google.com/spreadsheets/2006"><id>https://spreadsheets.google.com/feeds/cells/0Arbwqwx7QLn7dFdPRThGZFphbTVFNVh0QUV4Y2VobXc/3/private/full/R'+row+'C12</id><link rel="edit" type="application/atom+xml" href="https://spreadsheets.google.com/feeds/cells/0Arbwqwx7QLn7dFdPRThGZFphbTVFNVh0QUV4Y2VobXc/3/private/full/R'+row+'C12"/><gs:cell row="'+row+'" col="12" inputValue="'+jQuery.now()+'"/></entry>';
+                                 
+                                 var statuschange = new XMLHttpRequest();
+                                 statuschange.open('PUT','https://spreadsheets.google.com/feeds/cells/0Arbwqwx7QLn7dFdPRThGZFphbTVFNVh0QUV4Y2VobXc/3/private/full/R'+row+'C12');
+                                 statuschange.setRequestHeader('Authorization','Bearer ' + localStorage.Token);
+                                 statuschange.setRequestHeader('content-type','application/atom+xml');
+                                 statuschange.setRequestHeader('Gdata-version','3.0');
+                                 statuschange.setRequestHeader('if-match','*');
+                                 statuschange.onreadystatechange=function() {
+                                 if (statuschange.readyState==4) {
+                                 
+                                 
+                                 }
+                                 else
+                                 {
+                                 }
+                                 }
+                                 statuschange.send(badElement);
+                                 
+                                 
+                                 
+                                 var placeelm = '<entry xmlns="http://www.w3.org/2005/Atom" xmlns:gs="http://schemas.google.com/spreadsheets/2006"><id>https://spreadsheets.google.com/feeds/cells/0Arbwqwx7QLn7dFdPRThGZFphbTVFNVh0QUV4Y2VobXc/3/private/full/R'+row+'C6</id><link rel="edit" type="application/atom+xml" href="https://spreadsheets.google.com/feeds/cells/0Arbwqwx7QLn7dFdPRThGZFphbTVFNVh0QUV4Y2VobXc/3/private/full/R'+row+'C6"/><gs:cell row="'+row+'" col="6" inputValue="'+document.getElementById('place').value+'"/></entry>';
+                                 
+                                 var statuschange = new XMLHttpRequest();
+                                 statuschange.open('PUT','https://spreadsheets.google.com/feeds/cells/0Arbwqwx7QLn7dFdPRThGZFphbTVFNVh0QUV4Y2VobXc/3/private/full/R'+row+'C6');
+                                 statuschange.setRequestHeader('Authorization','Bearer ' + localStorage.Token);
+                                 statuschange.setRequestHeader('content-type','application/atom+xml');
+                                 statuschange.setRequestHeader('Gdata-version','3.0');
+                                 statuschange.setRequestHeader('if-match','*');
+                                 statuschange.onreadystatechange=function() {
+                                 if (statuschange.readyState==4) {
+                                 
+                                 
+                                 }
+                                 else
+                                 {
+                                 }
+                                 }
+                                 statuschange.send(placeelm);
+                                 
+                                 
+                                 var reportelm = '<entry xmlns="http://www.w3.org/2005/Atom" xmlns:gs="http://schemas.google.com/spreadsheets/2006"><id>https://spreadsheets.google.com/feeds/cells/0Arbwqwx7QLn7dFdPRThGZFphbTVFNVh0QUV4Y2VobXc/8/private/full/R'+(row+5)+'C7</id><link rel="edit" type="application/atom+xml" href="https://spreadsheets.google.com/feeds/cells/0Arbwqwx7QLn7dFdPRThGZFphbTVFNVh0QUV4Y2VobXc/8/private/full/R'+(row+5)+'C7"/><gs:cell row="'+(row+5)+'" col="7" inputValue="/"/></entry>';
+                                 
+                                 var statuschange = new XMLHttpRequest();
+                                 statuschange.open('PUT','https://spreadsheets.google.com/feeds/cells/0Arbwqwx7QLn7dFdPRThGZFphbTVFNVh0QUV4Y2VobXc/8/private/full/R'+(row+5)+'C7');
+                                 statuschange.setRequestHeader('Authorization','Bearer ' + localStorage.Token);
+                                 statuschange.setRequestHeader('content-type','application/atom+xml');
+                                 statuschange.setRequestHeader('Gdata-version','3.0');
+                                 statuschange.setRequestHeader('if-match','*');
+                                 statuschange.onreadystatechange=function() {
+                                 if (statuschange.readyState==4) {
+                                 
+                                 
+                                 }
+                                 else
+                                 {
+                                 }
+                                 }
+                                 statuschange.send(reportelm);
+                                 
+                                 var reportplace = '<entry xmlns="http://www.w3.org/2005/Atom" xmlns:gs="http://schemas.google.com/spreadsheets/2006"><id>https://spreadsheets.google.com/feeds/cells/0Arbwqwx7QLn7dFdPRThGZFphbTVFNVh0QUV4Y2VobXc/8/private/full/R'+(row+5)+'C6</id><link rel="edit" type="application/atom+xml" href="https://spreadsheets.google.com/feeds/cells/0Arbwqwx7QLn7dFdPRThGZFphbTVFNVh0QUV4Y2VobXc/8/private/full/R'+(row+5)+'C6"/><gs:cell row="'+(row+5)+'" col="6" inputValue="'+document.getElementById('place').value+'"/></entry>';
+                                 
+                                 var statuschange = new XMLHttpRequest();
+                                 statuschange.open('PUT','https://spreadsheets.google.com/feeds/cells/0Arbwqwx7QLn7dFdPRThGZFphbTVFNVh0QUV4Y2VobXc/8/private/full/R'+(row+5)+'C6');
+                                 statuschange.setRequestHeader('Authorization','Bearer ' + localStorage.Token);
+                                 statuschange.setRequestHeader('content-type','application/atom+xml');
+                                 statuschange.setRequestHeader('Gdata-version','3.0');
+                                 statuschange.setRequestHeader('if-match','*');
+                                 statuschange.onreadystatechange=function() {
+                                 if (statuschange.readyState==4) {
+                                 
+                                 
+                                 }
+                                 else
+                                 {
+                                 }
+                                 }
+                                 statuschange.send(reportplace);
+                                 
+                                 var reportclear1 = '<entry xmlns="http://www.w3.org/2005/Atom" xmlns:gs="http://schemas.google.com/spreadsheets/2006"><id>https://spreadsheets.google.com/feeds/cells/0Arbwqwx7QLn7dFdPRThGZFphbTVFNVh0QUV4Y2VobXc/8/private/full/R'+(row+5)+'C8</id><link rel="edit" type="application/atom+xml" href="https://spreadsheets.google.com/feeds/cells/0Arbwqwx7QLn7dFdPRThGZFphbTVFNVh0QUV4Y2VobXc/8/private/full/R'+(row+5)+'C8"/><gs:cell row="'+(row+5)+'" col="8" inputValue=""/></entry>';
+                                 
+                                 var statuschange = new XMLHttpRequest();
+                                 statuschange.open('PUT','https://spreadsheets.google.com/feeds/cells/0Arbwqwx7QLn7dFdPRThGZFphbTVFNVh0QUV4Y2VobXc/8/private/full/R'+(row+5)+'C8');
+                                 statuschange.setRequestHeader('Authorization','Bearer ' + localStorage.Token);
+                                 statuschange.setRequestHeader('content-type','application/atom+xml');
+                                 statuschange.setRequestHeader('Gdata-version','3.0');
+                                 statuschange.setRequestHeader('if-match','*');
+                                 statuschange.onreadystatechange=function() {
+                                 if (statuschange.readyState==4) {
+                                 
+                                 
+                                 }
+                                 else
+                                 {
+                                 }
+                                 }
+                                 statuschange.send(reportclear1);
+                                 
+                                 var reportclear2 = '<entry xmlns="http://www.w3.org/2005/Atom" xmlns:gs="http://schemas.google.com/spreadsheets/2006"><id>https://spreadsheets.google.com/feeds/cells/0Arbwqwx7QLn7dFdPRThGZFphbTVFNVh0QUV4Y2VobXc/8/private/full/R'+(row+5)+'C9</id><link rel="edit" type="application/atom+xml" href="https://spreadsheets.google.com/feeds/cells/0Arbwqwx7QLn7dFdPRThGZFphbTVFNVh0QUV4Y2VobXc/8/private/full/R'+(row+5)+'C9"/><gs:cell row="'+(row+5)+'" col="9" inputValue=""/></entry>';
+                                 
+                                 var statuschange = new XMLHttpRequest();
+                                 statuschange.open('PUT','https://spreadsheets.google.com/feeds/cells/0Arbwqwx7QLn7dFdPRThGZFphbTVFNVh0QUV4Y2VobXc/8/private/full/R'+(row+5)+'C9');
+                                 statuschange.setRequestHeader('Authorization','Bearer ' + localStorage.Token);
+                                 statuschange.setRequestHeader('content-type','application/atom+xml');
+                                 statuschange.setRequestHeader('Gdata-version','3.0');
+                                 statuschange.setRequestHeader('if-match','*');
+                                 statuschange.onreadystatechange=function() {
+                                 if (statuschange.readyState==4) {
+                                 
+                                 
+                                 }
+                                 else
+                                 {
+                                 }
+                                 }
+                                 statuschange.send(reportclear2);
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 Bcode="";
+                                 }
+                                 
+                                 }
+                                 
+                                 
+                                 });
+            $("#upload").unbind("tap");
+            
+            $("#upload").on('tap',function(evt){
+                            evt.stopPropagation();
+                            evt.preventDefault();
+                            window.location="#waitingpage";
+                            alert("before create");
+                            if(uploadwait==0)
+                            {
+                            uploadwait=1;
+                            if(albumcode=="-")
+                            {
+                               $.mobile.loading( 'show', { theme: "b", text: "foo", textonly: false });
+							  
+                            var entryElement ="<entry xmlns='http://www.w3.org/2005/Atom' xmlns:media='http://search.yahoo.com/mrss/' xmlns:gphoto='http://schemas.google.com/photos/2007'><title type='text'>"+text+"</title><summary type='text'>"+text+"</summary><gphoto:location>FITM</gphoto:location><gphoto:access>public</gphoto:access><gphoto:timestamp>"+jQuery.now()+"</gphoto:timestamp><media:group><media:keywords>FITM, Asset</media:keywords></media:group><category scheme='http://schemas.google.com/g/2005#kind' term='http://schemas.google.com/photos/2007#album'></category></entry>";
+                            var xhr = new XMLHttpRequest();
+                            xhr.open('POST','https://picasaweb.google.com/data/feed/api/user/115537060617662110603/');
+                            xhr.setRequestHeader('Authorization','Bearer ' + localStorage.Token);
+                            xhr.setRequestHeader('content-type','application/atom+xml');
+                            xhr.setRequestHeader('Gdata-version','2.0');
+                            xhr.onreadystatechange=function() {
+                            if (xhr.readyState==4) {
+                            var sbstring = xhr.responseText;
+                            alert("Status"+sbstring.substr(sbstring.indexOf("<id>")+44,sbstring.indexOf("</id>")-sbstring.indexOf("<id>")-44));
+                            tempalubum=sbstring.substr(sbstring.indexOf("<id>")+44,sbstring.indexOf("</id>")-sbstring.indexOf("<id>")-44);
+                            albumcode=tempalubum;
+                            var fileimage = document.getElementById("capp").files[0];
+                            alert("Uploading an image");
+                            var xhr2 = new XMLHttpRequest();
+                            xhr2.open('POST','https://picasaweb.google.com/data/feed/api/'+tempalubum);
+                            xhr2.setRequestHeader('Authorization','Bearer ' + localStorage.Token);
+                            xhr2.setRequestHeader('content-type','image/jpeg');
+                            xhr2.setRequestHeader('Gdata-version','2.0');
+                            xhr2.onreadystatechange=function() {
+                            if (xhr2.readyState==4) {
+                           
+                            
+                            var badElement = '<entry xmlns="http://www.w3.org/2005/Atom" xmlns:gs="http://schemas.google.com/spreadsheets/2006"><id>https://spreadsheets.google.com/feeds/cells/0Arbwqwx7QLn7dFdPRThGZFphbTVFNVh0QUV4Y2VobXc/od6/private/full/R'+row+'C11</id><link rel="edit" type="application/atom+xml" href="https://spreadsheets.google.com/feeds/cells/0Arbwqwx7QLn7dFdPRThGZFphbTVFNVh0QUV4Y2VobXc/od6/private/full/R'+row+'C11"/><gs:cell row="'+row+'" col="11" inputValue="https://picasaweb.google.com/data/feed/api/'+tempalubum+'"/></entry>';
+                            
+                            var upload = new XMLHttpRequest();
+							if(branch==1)
+                            upload.open('PUT','https://spreadsheets.google.com/feeds/cells/0Arbwqwx7QLn7dFdPRThGZFphbTVFNVh0QUV4Y2VobXc/1/private/full/R'+row+'C11');
+							else if(branch==2)
+                            upload.open('PUT','https://spreadsheets.google.com/feeds/cells/0Arbwqwx7QLn7dFdPRThGZFphbTVFNVh0QUV4Y2VobXc/2/private/full/R'+row+'C11');
+							else if(baranch==3)
+                            upload.open('PUT','https://spreadsheets.google.com/feeds/cells/0Arbwqwx7QLn7dFdPRThGZFphbTVFNVh0QUV4Y2VobXc/3/private/full/R'+row+'C11');
+                           
+						   upload.setRequestHeader('Authorization','Bearer ' + localStorage.Token);
+                            upload.setRequestHeader('content-type','application/atom+xml');
+                            upload.setRequestHeader('Gdata-version','3.0');
+                            upload.setRequestHeader('if-match','*');
+                            upload.onreadystatechange=function() {
+                            if (upload.readyState==4) {
+                            alert("Status"+upload.status);
+                            if(upload.status==200)
+                            {
+                            
+                            updateDB();
+                            }
+                            }
+                            else
+                            {}
+                            }
+                            upload.send(badElement);
+                            fileimage=null;
+                            uploadwait=0;
+                             window.location="#bar2";
+                           
+                                                      }
+                            
+                            
+                            }
+                            xhr2.send(fileimage);
+                            
+                            }
+                            else
+                            {
+                            }
+                            }
+                            xhr.send(entryElement);
+                            
+                            }
+                            else
+                            {
+							   $.mobile.loading( 'show', { theme: "b", text: "foo", textonly: false });
+							  
+                            var fileimage = document.getElementById("capp").files[0];
+                            alert("Uploading an image : "+albumcode);
+                            var xhr2 = new XMLHttpRequest();
+                            xhr2.open('POST',albumcode);
+                            xhr2.setRequestHeader('Authorization','Bearer ' + localStorage.Token);
+                            xhr2.setRequestHeader('content-type','image/jpeg');
+                            xhr2.setRequestHeader('Gdata-version','2.0');
+                            xhr2.onreadystatechange=function() {
+                            if (xhr2.readyState==4) {
+                            alert("Status"+xhr2.responseText);
+                            fileimage=null;
+                            uploadwait=0;
+                             window.location="#bar2";
+                            }
+                            }
+                            xhr2.send(fileimage);
+                            
+                            }
+                            }
+                            
+                            
+                            
+                            });
+            
+            var tempstatus="null";
+            var tempoldcode="null";
+            var tempplace="null";
+            var temptype="null";
+			 $("#db").change(function() {
+                                 
+                                 
+								 branch=$("#db option:selected").val();
+                                  //alert(branch);
+                                 });
+			
+            $("#FTPlace").change(function() {
+                                 
+                                 
+                                 tempplace = $('#FTPlace option:selected').val();
+                              
+                                 if(tempplace=="")
+								{
+								tempplace="null";
+								}
+                                 projection();
+                                 });
+            $("#FTType").change(function() {
+                                
+                                
+                                temptype= $('#FTType option:selected').val();
+                                if(temptype=="")
+								{
+								temptype="null";
+								}
+                                projection();
+                                });
+            
+            $("#FTStatus").change(function() {
+                                  tempstatus = $('#FTStatus option:selected').val();
+								  if(tempstatus=="")
+								{
+								tempstatus="null";
+								}
+                                  projection();
+                                  });
+            
+            $("#FTDate").change(function() {
+                            
+                                tempoldcode = $('#FTDate option:selected').val();
+								if(tempoldcode=="")
+								{
+								tempoldcode="null";
+								}
+                                projection();
+                                });
+            
+            
+            
+            function projection()
+            {
+                
+                
+                
+                var statusinurl=tempstatus;
+                var typeinurl=temptype;
+                var placeinurl=tempplace;
+                var filterurl = "https://spreadsheets.google.com/feeds/list/0Arbwqwx7QLn7dFdPRThGZFphbTVFNVh0QUV4Y2VobXc/od6/public/basic?sq=";
+                var oldcodeinurl="";
+                
+                    oldcodeinurl=tempoldcode;
+               
+                if(statusinurl=="null")
+                {
+                    if(oldcodeinurl=="null")
+                    
+                    {
+                        if(typeinurl=="null")
+                        {
+                            if(placeinurl=="null")
+                            {
+                                filterurl="https://spreadsheets.google.com/feeds/list/0Arbwqwx7QLn7dFdPRThGZFphbTVFNVh0QUV4Y2VobXc/od6/public/basic?sq=";
+                            }
+                            else 
+                            {
+                                filterurl = filterurl+"place==\""+placeinurl+"\"";
+                            }
+                        }
+                        else
+                        {
+                            if(placeinurl=="null"){
+                                filterurl = filterurl+"type==\""+typeinurl+"\"";
+                            }
+                            else
+                            {
+                                filterurl = filterurl+"type==\""+typeinurl+"%20and%20place==\""+placeinurl+"\"";
+                            }
+                            
+                        }
+                    }
+                    else
+                    {
+                        if(typeinurl=="null")
+                        {
+                            if(placeinurl=="null")
+                            {
+                                filterurl=filterurl+"oldcode==\""+oldcodeinurl+"\"";
+                            }
+                            else
+                            {
+                                filterurl = filterurl+"place==\""+placeinurl+"\"%20and%20oldcode==\""+oldcodeinurl+"\"";
+                            }
+                        }
+                        else
+                        {
+                            if(placeinurl=="null"){
+                                filterurl = filterurl+"type==\""+typeinurl+"\"%20and%20oldcode==\""+oldcodeinurl+"\"";
+                            }
+                            else
+                            {
+                                filterurl = filterurl+"type==\""+typeinurl+"\"%20and%20place=="+placeinurl+"\"%20and%20oldcode==\""+oldcodeinurl+"\"";
+                            }
+                            
+                        }
+                        
+                        
+                    }
+                    
+                    
+                }
+                else
+                {
+                    
+                    if(oldcodeinurl=="null")
+                    
+                    {
+                        if(typeinurl=="null")
+                        {
+                            if(placeinurl=="null")
+                            {
+                                filterurl=filterurl+"status==\""+statusinurl+"\"";
+                            }
+                            else
+                            {
+                                filterurl = filterurl+"place==\""+placeinurl+"\"%20and%20status==\""+statusinurl+"\"";
+                            }
+                        }
+                        else
+                        {
+                            if(placeinurl=="null"){
+                                filterurl = filterurl+"type==\""+typeinurl+"\"%20and%20status==\""+statusinurl+"\"";
+                            }
+                            else
+                            {
+                                filterurl = filterurl+"type==\""+typeinurl+"\"%20and%20place==\""+placeinurl+"\"%20and%20status==\""+statusinurl+"\"";
+                            }
+                            
+                        }
+                    }
+                    else
+                    {
+                        if(typeinurl=="null")
+                        {
+                            if(placeinurl=="null")
+                            {
+                                filterurl=filterurl+"oldcode==\""+oldcodeinurl+"\"%20and%20status==\""+statusinurl+"\"";
+                            }
+                            else
+                            {
+                                filterurl = filterurl+"place==\""+placeinurl+"\"%020and%20oldcode==\""+oldcodeinurl+"\"%20and%20status==\""+statusinurl+"\"";
+                            }
+                        }
+                        else
+                        {
+                            if(placeinurl=="null"){
+                                filterurl = filterurl+"type==\""+typeinurl+"\"%20and%20status==\""+statusinurl+"\"";
+                            }
+                            else
+                            {
+                                filterurl = filterurl+"type==\""+typeinurl+"\"%20and%20place==\""+placeinurl+"\"%20and%20oldcode==\""+oldcodeinurl+"\"%20and%20status==\""+statusinurl+"\"";
+                            }
+                            
+                        }
+                        
+                        
+                        
+                    }
+                    
+                }
+                
+                               filterurl = filterurl+"&alt=json";
+                alert(filterurl);
+                $.getJSON(filterurl,function(result){
+                          
+                          $("#FTResult").html(" ");
+
+                          alert(result);
+                          for(var i =0;i<50;i=i+1)
+                          {
+                          
+                          myArray = result.feed.entry[i].content["$t"];
+                          
+                          myArr = myArray.split(",");
+                          
+                          arrelem = myArr[0].split(":");
+                        
+                          
+                          var tempArray1 = new Array();
+                          var tempArray2 = new Array();
+                          for(var k = 0 ; k<myArr.length-4 ; k++)
+                          {
+                          tempText = myArr[k].split(":");
+						  
+                          tempArray1[k]=tempText[0];
+						  tempArray2[k]=tempText[1];
+						  
+                          
+                          
+                          }
+						  
+						   $("#FTResult").append('<table style="font-size:1.7em;" "data-role="table" id="table-custom-2" data-mode="columntoggle" class="ui-body-d ui-shadow table-stripe ui-responsive" data-column-btn-theme="b" data-column-btn-text="Columns to display..." data-column-popup-theme="a"><thead><tr class="ui-bar-d"><th>Title</th><th>Description</th></tr></thead><tbody><tr><td>'+tempArray1[0]+'</td><td> '+ tempArray2[0]+'</td></tr><tr><td>'+tempArray1[1]+'</td><td> '+ tempArray2[1]+'</td></tr><tr><td>'+tempArray1[2]+'</td><td> '+ tempArray2[2]+'</td></tr><tr><td>'+tempArray1[3]+'</td><td> '+ tempArray2[3]+'</td></tr><tr><td>'+tempArray1[4]+'</td><td> '+ tempArray2[4]+'</td></tr><tr><td>'+tempArray1[5]+'</td><td> '+ tempArray2[5]+'</td></tr><tr><td>'+tempArray1[6]+'</td><td> '+ tempArray2[6]+'</td></tr></tbody></table>');
+                          
+						  
+                          }
+                          
+                          
+           
+                          });
+                
+                
+            }
+   
+            
+            function updateDB()
+            {
+                if(updateWait == 0)
+                {
+                    updateWait=1;
+                $.getJSON("https://picasaweb.google.com/data/feed/api/user/115537060617662110603/?alt=json",function(result){
+                          
+                          lastJSONpicasa=result;
+                          
+                          });
+                
+                $.getJSON("https://spreadsheets.google.com/feeds/list/0Arbwqwx7QLn7dFdPRThGZFphbTVFNVh0QUV4Y2VobXc/1/public/basic?alt=json",function(result0){
+                          lastJSONReponse = result0;
+                          localStorage.itemjson = lastJSONReponse;
+                          
+                          
+                          
+                          });
+                    
+                    $.getJSON("https://spreadsheets.google.com/feeds/list/0Arbwqwx7QLn7dFdPRThGZFphbTVFNVh0QUV4Y2VobXc/2/public/basic?alt=json",function(result1){
+                              lastITReponse = result1;
+                              localStorage.itjson = lastITReponse;
+                              });
+                    $.getJSON("https://spreadsheets.google.com/feeds/list/0Arbwqwx7QLn7dFdPRThGZFphbTVFNVh0QUV4Y2VobXc/3/public/basic?alt=json",function(result2){
+                              lastITTDReponse = result2;
+                              localStorage.tdjson = lastITTDReponse;
+                              });
+                    updateWait=0;
+                }
+                
+                
+                
+                
+            }
+         
+            
+            
+              $("#loginbtn").unbind("click");
+            $("#loginbtn").on('click', function(evt) {
+                              evt.stopPropagation();
+                              evt.preventDefault();
+                              $.mobile.loading( 'show', { theme: "b", text: "foo", textonly: false });
+							  
+							  $('#loginbtn').closest('.ui-btn').fadeOut();
+                              $loginStatus.html("Wait for loading data from google doc!");
+                              $.getJSON("https://picasaweb.google.com/data/feed/api/user/115537060617662110603/?alt=json",function(result){
+                                        
+                                        lastJSONpicasa=result;                                        
+                                        
+                                        });
+                              /*   $.getJSON("https://spreadsheets.google.com/feeds/cells/0Arbwqwx7QLn7dFdPRThGZFphbTVFNVh0QUV4Y2VobXc/od7/public/basic?min-row=1&min-col=2&max-col=2&alt=json",function(result){
+                               
+                               lastNameReponse=result;
+                               localStorage.lastName = lastNameReponse;
+                               
+                               });*/
+                              $.getJSON("https://spreadsheets.google.com/feeds/cells/0Arbwqwx7QLn7dFdPRThGZFphbTVFNVh0QUV4Y2VobXc/od7/public/basic?min-row=1&min-col=3&max-col=3&alt=json",function(result){
+                                        
+                                        lastPlaceReponse=result;
+                                        
+                                        for(var i = 1; i <lastPlaceReponse.feed.entry.length ; i=i+1)
+                                        {
+                                        $("#FTPlace").append('<option val="'+lastPlaceReponse.feed.entry[i].content["$t"]+'">'+lastPlaceReponse.feed.entry[i].content["$t"]+'</option>');
+                                        }
+                                        });
+                              $.getJSON("https://spreadsheets.google.com/feeds/cells/0Arbwqwx7QLn7dFdPRThGZFphbTVFNVh0QUV4Y2VobXc/od7/public/basic?min-row=1&min-col=4&max-col=4&alt=json",function(result){
+                                        
+                                        lastTypeReponse=result;
+                                        localStorage.lastType = lastTypeReponse;
+                                        for(var i = 1; i <lastTypeReponse.feed.entry.length ; i=i+1)
+                                        {
+                                        if(lastTypeReponse.feed.entry[i].content["$t"]==1)
+                                        $("#FTType").append('<option value="'+lastTypeReponse.feed.entry[i].content["$t"]+'">ยานพาหนะ</option>');
+                                        else if(lastTypeReponse.feed.entry[i].content["$t"]==2)
+                                        $("#FTType").append('<option value="'+lastTypeReponse.feed.entry[i].content["$t"]+'">เครื่องมือ</option>');
+                                        else if(lastTypeReponse.feed.entry[i].content["$t"]==3)
+                                        $("#FTType").append('<option value="'+lastTypeReponse.feed.entry[i].content["$t"]+'">เครื่องสำนักงาน</option>');
+                                        else if(lastTypeReponse.feed.entry[i].content["$t"]==4)
+                                        $("#FTType").append('<option value="'+lastTypeReponse.feed.entry[i].content["$t"]+'">เครื่องใช้ไฟฟ้า</option>');
+                                        else
+                                         $("#FTType").append('<option value="'+lastTypeReponse.feed.entry[i].content["$t"]+'">'+lastTypeReponse.feed.entry[i].content["$t"]+'</option>');
+                                        
+                                        }
+                                        });
+                              $.getJSON("https://spreadsheets.google.com/feeds/cells/0Arbwqwx7QLn7dFdPRThGZFphbTVFNVh0QUV4Y2VobXc/od7/public/basic?min-row=1&min-col=5&max-col=5&alt=json",function(result){
+                                        
+                                        lastStatusReponse=result;
+                                        localStorage.lastStatus = lastStatusReponse;
+                                        for(var i = 1; i <lastStatusReponse.feed.entry.length ; i=i+1)
+                                        {
+                                        if(lastStatusReponse.feed.entry[i].content["$t"]==1)
+                                        $("#FTStatus").append('<option value="'+lastStatusReponse.feed.entry[i].content["$t"]+'">ปกติ</option>');
+                                        else if(lastStatusReponse.feed.entry[i].content["$t"]==2)
+                                        $("#FTStatus").append('<option value="'+lastStatusReponse.feed.entry[i].content["$t"]+'">ชำรุดรอซ่อม</option>');
+                                        else if(lastStatusReponse.feed.entry[i].content["$t"]==3)
+                                        $("#FTStatus").append('<option value="'+lastStatusReponse.feed.entry[i].content["$t"]+'">ชำรุดรอจำหน่าย</option>');
+                                        else
+                                          $("#FTStatus").append('<option value="'+lastStatusReponse.feed.entry[i].content["$t"]+'">'+lastStatusReponse.feed.entry[i].content["$t"]+'</option>');
+                                        }
+                                        });
+                              $.getJSON("https://spreadsheets.google.com/feeds/cells/0Arbwqwx7QLn7dFdPRThGZFphbTVFNVh0QUV4Y2VobXc/od7/public/basic?min-row=1&min-col=6&max-col=6&alt=json",function(result){
+                                        
+                                        lastDateReponse=result;
+                                        localStorage.lastDate = lastDateReponse;
+                                        for(var i = 1; i <lastDateReponse.feed.entry.length ; i=i+1)
+                                        {
+                                        
+                                        $("#FTDate").append('<option value="'+lastDateReponse.feed.entry[i].content["$t"]+'">'+lastDateReponse.feed.entry[i].content["$t"]+'</option>');
+                                        }
+                                        });
+                              
+                              
+                                $.getJSON("https://spreadsheets.google.com/feeds/list/0Arbwqwx7QLn7dFdPRThGZFphbTVFNVh0QUV4Y2VobXc/2/public/basic?alt=json",function(result2){
+                                          lastITReponse = result2;
+                                          localStorage.itjson = lastITReponse;
+                                          //alert(lastITReponse.feed.entry[1].content["$t"]);
+                                          });
+                                $.getJSON("https://spreadsheets.google.com/feeds/list/0Arbwqwx7QLn7dFdPRThGZFphbTVFNVh0QUV4Y2VobXc/3/public/basic?alt=json",function(result1){
+                                        lastITTDReponse = result1;
+                                        localStorage.tdjson = lastITTDReponse;
+                                          //alert(lastITTDReponse.feed.entry[1].content["$t"]);
+                                        });
+
+                              $.getJSON("https://spreadsheets.google.com/feeds/list/0Arbwqwx7QLn7dFdPRThGZFphbTVFNVh0QUV4Y2VobXc/1/public/basic?alt=json",function(result){
+                                        lastJSONReponse = result;
+                                        localStorage.itemjson = lastJSONReponse;
+                                         //alert(lastJSONReponse.feed.entry[1].content["$t"]);
+                                        $loginStatus.html("Google doc data load complete");
+                                        var networkState = navigator.connection.type;
+                                        
+                                        var states = {};
+                                        states[Connection.UNKNOWN]  = 'Unknown connection';
+                                        states[Connection.ETHERNET] = 'Ethernet connection';
+                                        states[Connection.WIFI]     = 'WiFi connection';
+                                        states[Connection.CELL_2G]  = 'Cell 2G connection';
+                                        states[Connection.CELL_3G]  = 'Cell 3G connection';
+                                        states[Connection.CELL_4G]  = 'Cell 4G connection';
+                                        states[Connection.CELL]     = 'Cell generic connection';
+                                        states[Connection.NONE]     = 'No network connection';
+                                        
+                                        if(states[networkState]=='No network connection')
+                                        {
+                                        navigator.notification.vibrate(2500);
+                                        navigator.notification.alert(
+                                                                     'Pleas Connect to Internet!',  // message
+                                                                     alertDismissed,         // callback
+                                                                     'No Connection Found',            // title
+                                                                     'Done'                  // buttonName
+                                                                     );
+                                        }
+                                        else{
+                                        googleapi.authorize({
+                                                            client_id: '471121443856.apps.googleusercontent.com',
+                                                            client_secret: 'HO8tYtj05BdNd0ZzXbS7Wi8H',
+                                                            redirect_uri: 'http://localhost',
+                                                            scope: 'https://www.googleapis.com/auth/userinfo.profile https://picasaweb.google.com/data/ https://spreadsheets.google.com/feeds'
+                                                            }).done(function(data) {
+                                                                    localStorage.Token = data.access_token;
+                                                                    localStorage.nameuser=data.name;
+                                                                   $('body').css('background','url(bg_blue.jpg)');
+                                                                    window.location="#bar2";
+                                                                    
+                                                                    }).fail(function(data) {
+                                                                           alert("restart โล้ด");
+                                                                            });
+                                        
+                                       
+                                        
+                                        
+                                        
+                                        
+                                        }
+                                        });
+                              });
+            
+		
+			
+			
+			$("#FTDateb").unbind("click");
+				$("#FTStatusb").unbind("tap");
+            	$("#FTStatusb").on("tap",function(){
+				$("#FTStatus").show();
+				});
+			$("#FTPlaceb").unbind("click");
+			$("#FTPlaceb").on("click",function(){});
+			$("#FTTypeb").unbind("click");
+			$("#FTTypeb").on("click",function(){});
+			$("#FTDateb").unbind("click");
+			$("#FTDateb").on("click",function(){});
+            
+           
+            </script>
+			
+			<script>
+$("#FTStatusb").on("click",function(){
+$("#FTStatus").selectmenu("open");
+});
+$("#FTPlaceb").on("click",function(){
+$("#FTPlace").selectmenu("open");
+});
+$("#FTTypeb").on("click",function(){
+$("#FTType").selectmenu("open");
+});$("#FTDateb").on("click",function(){
+$("#FTDate").selectmenu("open");
+});
+
+$("#uploadchoose").on("click",function(){$("#capp").click();});
+</script>
+        
+    </body>
+    
+</html>

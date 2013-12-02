@@ -1,0 +1,73 @@
+﻿<!DOCTYPE html>
+<html>
+	<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Icons - jQuery Mobile Demos</title>
+
+	
+	<link rel="stylesheet" href="css/index.css"/>
+	<link rel="stylesheet" href="css/external.css"/>	<!--JQ mobile css-->
+	<script src="js/jquery-1.8.3.min.js"></script> <!--JQ mobile.js-->
+	<script src="js/jquery.mobile-1.2.1.min.js"></script> <!--JQ mobile. JS-->
+	
+	
+</head>
+<body>
+
+ <div data-role="content">
+                       
+                        	<select  data-native-menu="false" data-inline="false" id="db" name="db">
+							<option selected value = "1">MAIN-DATABASE</option>
+							<option  value = "2">IT-DATABASE</option>
+							<option  value = "3">IT3D-DATABASE</option>
+							
+							</select>
+                      
+                          
+                        <button id="scan-button"data-theme="c"><div style="font-size:4em; padding:5%;">Scan Barcode</div></button>
+                        <div class="ui-grid-a" style="" >
+							<div class="ui-block-a"><button id = "uploadchoose"data-theme="d"><div style="font-size:4em; padding:5%;">Choose</div></button></div>
+							<div class="ui-block-b"><button id = "upload"data-theme="d"><div style="font-size:4em; padding:5%;">upload</div></button></div>				
+						</div>
+						
+						<input type="file"  id="capp" style="width:100%; height:20%; background-color:white; font-size:1.7em; margin:5%" />
+						<div id="scan-result" ></div>
+						<!--div style="position:relative; margin-top:90%; width:100%; "-->
+						<div class="ui-grid-b" >
+								<div class="ui-block-a"><button id = 'statuscheck'  data-theme="b" data-corners="false"><h2>ปรกติ</h2></button></div>
+								<div class="ui-block-b"><button id = 'bad'data-theme="b" data-corners="false"><h2>ชำรุดรอซ่อม</h2></button></div>
+								<div class="ui-block-c"><button id = 'worst'data-theme="b" data-corners="false"><h2>ชำรุดรอจำหน่าย</h2></button></div>
+						</div><!-- /grid-b -->
+
+
+                        
+				</div><!-- /content -->
+
+
+</body>
+</html>
+<script>
+$("#btn").on("click",function(evt){ 
+
+ evt.stopPropagation();
+                evt.preventDefault();
+				alert("click");
+$("#test").append(' <table style="font-size:1.7em; width:90%; height:50%;" data-role="table" id="table-custom-1" data-mode="columntoggle" class="ui-body-d ui-shadow table-stripe ui-responsive" data-column-btn-theme="b" data-column-btn-text="Columns to display..." data-column-popup-theme="a"><thead><tr class="ui-bar-d"><th>Title</th><th>Description</th></tr></thead><tbody><tr><td>tempArray1[0]</td><td>  tempArray2[0]</td></tr><tr><td>tempArray1[1]</td><td> tempArray2[1]</td></tr><tr><td>tempArray1[2]</td><td> tempArray2[2]</td></tr><tr><td>tempArray1[3]</td><td>tempArray2[3]</td></tr><tr><td>tempArray1[4]</td><td> <input type ="text" id="place" value=""></input></td></tr><tr><td>tempArray1[5]</td><td>  tempArray2[5]</td></tr><tr><td>tempArray1[6]</td><td> tempArray2[6]</td></tr></tbody></table> ');
+document.getElementById('place').value='test';
+});
+
+$("#FTStatusb").on("click",function(){
+$("#FTStatus").selectmenu("open");
+});
+$("#FTPlaceb").on("click",function(){
+$("#FTPlace").selectmenu("open");
+});
+$("#FTTypeb").on("click",function(){
+$("#FTType").selectmenu("open");
+});$("#FTDateb").on("click",function(){
+$("#FTDate").selectmenu("open");
+});
+
+</script>
+
